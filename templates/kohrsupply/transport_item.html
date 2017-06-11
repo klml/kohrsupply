@@ -1,0 +1,42 @@
+
+    <div class="gettfetter">
+    {% if  transport.active %}
+        {{ transport.getfet }}
+    {% else %}
+        closed
+    {% endif %}
+    </div>
+    <div class="distance2target" title="aktueller Abstand zum Ziel">
+        {{ transport.distance2target }} km
+    </div>
+
+    <div class="holder" title="Aktueller Besitzer">
+    {% load l10n %}
+        {{ transport.currentLocation.locationname }}
+
+    <em>{{ transport.currentHolder }}({{ transport.currentHolderPoints.summa  }} )</em>
+    <span class="coords">{{ transport.currentLocation.geoLat | unlocalize }}, {{ transport.currentLocation.geoLon | unlocalize }}</span>
+    </div>
+
+    <div class="recipient recipientgetfet_{{ transport.recipientgetfet }}">
+    {{ transport.recipientLocation.locationname }} <em title="{{ transport.recipientgetfet }}"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
+
+    
+    <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
+    </div>
+
+
+    <div id="qrcodeurl" class="right" ></div>
+
+    <p class="contentDescription">
+    {{ transport.contentDescription }}
+    </p>
+    <small>Klasse:</small> <span class="contentclass {{ transport.contentClass }}">{{ transport.contentClass }}</span> –
+    <small>Größe:</small> {{ transport.contentSize }} –,
+    <small>Gewicht:</small> {{ transport.contentWeight }}
+    <br />
+    <small>
+    # {{ transport.id }}    
+    Startpunkt: {{transport.origin }} bei {{ transport.sender }} um {{ transport.begin }}
+    Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
+    </small>

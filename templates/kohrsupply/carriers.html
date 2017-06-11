@@ -1,0 +1,25 @@
+{% extends "kohrsupply/base.html" %}
+
+{% block content %}
+
+<h1>Carriers</h1>
+
+<div class="carriers">
+<ol>
+{% for carrier in carriers %}
+    <li class="carrier"> 
+    <a href="/carrier/{{ carrier.id }}" title="carrier">{{ carrier }}</a>
+    {{ carrier.transportuserlocation.location.locationname }}
+    {% load l10n %}
+    {% if carrier.transportuserlocation.location.geoLat %}
+        <span class="coords">{{ carrier.transportuserlocation.location.geoLat | unlocalize  }}, {{ carrier.transportuserlocation.location.geoLon |  unlocalize }}</span>
+    {% endif %}
+
+     </li>
+{% endfor %}
+</ol>
+</div>
+
+<div id="mapid"></div>
+
+{% endblock %}

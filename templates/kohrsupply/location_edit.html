@@ -1,0 +1,19 @@
+{% extends "kohrsupply/base.html" %}
+
+{% block content %}
+
+<h2>location</h2>
+
+<form method="post" >
+{% csrf_token %}
+    
+            {{ form.as_p }}
+
+        <button id="saveloco" type="submit" class="save btn btn-default">Save</button>
+
+
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+<button id="getStreetZipCity">getStreetZipCity</button>
+{% endblock %}

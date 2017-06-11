@@ -1,0 +1,80 @@
+{% extends "kohrsupply/base.html" %}
+
+
+{% block content %}
+
+
+<div class="location">
+
+    <h1>
+    {{ location.locationname }}
+    {{ location.mail }}
+    </h1>
+
+
+    {% if user.is_authenticated %}
+    
+            <form method="POST" id="closetransport" class="">
+            {% csrf_token %}
+            <input name="checkin" value="{{ location.id }}" type="hidden" />
+            <button id="savetrs" type="submit" class="save btn btn-default">checkin!</button>
+        </form>
+    {% endif %}
+
+    <br />
+    {{ location.street }} {{ location.streetnr }}
+    {{ location.zip }} {{ location.city }}
+    {{ location.country }}
+    <br />
+    {% load l10n %}
+
+    <span class="coords">
+    {{ location.geoLat | unlocalize }},
+    {{ location.geoLon | unlocalize }}
+    </span>
+    
+    <br />
+    Created by {{ location.author }} at {{ location.lastused }}
+
+
+    
+    {% if user.is_authenticated %}
+    {% endif %}
+    <br />    
+    {% if location.author.id == user.id %}
+    <a href="{% url 'location_edit' pk=location.pk %}">edit this location</a>
+    {% endif %}
+    
+    <h2>transport current</h2>
+    {% for currentTransport in currentTransports  %}
+        {% for transport in currentTransport  %}
+
+    <br>
+        <a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})
+        {% endfor  %}
+    {% endfor  %}
+    
+    
+    <h2>transport to here</h2>
+    {% for recipientTransport in recipientTransports  %}
+        {% for transport in recipientTransport  %}
+    <a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})
+    <br>
+        {% endfor  %}
+    {% endfor  %}
+
+    <h2>users are here</h2>
+    {% for locationUserTransport in locationUserTransports  %}
+        {{ locationUserTransport.user }}
+    {% endfor  %}
+    
+    <hr class="cb" />
+    <a href="?delete={{ location.id }}" title="delete">delete!</a>
+
+    <hr class="cb" />
+</div>
+
+ <div id="mapid"></div>
+
+
+{% endblock %}

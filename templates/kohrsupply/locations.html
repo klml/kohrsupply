@@ -1,0 +1,37 @@
+{% extends "kohrsupply/base.html" %}
+
+{% block content %}
+
+<h1>locations</h1>
+
+    <a href="/location/" title="edit">new</a>
+
+<div class="locations">
+<ol>
+{% for transportloca in transportlocationlist %}
+    <li class="location"> 
+    
+    <a href="/location/{{ transportloca.id }}" title="edit">{{ transportloca.locationname }}</a>
+    {{ transportloca.street }}
+
+    {% load l10n %}
+        <span class="coords">{{ transportloca.geoLat | unlocalize  }}, {{ transportloca.geoLon |  unlocalize }}</span>
+
+
+    {% if user.is_authenticated %}
+        <form method="POST" id="closetransport" class="">
+            {% csrf_token %}
+            <input name="checkin" value="{{ transportloca.id }}" type="hidden" />
+            <button id="savetrs" type="submit" class="save btn btn-default">checkin!</button>
+        </form>
+    {% endif %}
+
+     </li>
+{% endfor %}
+</ol>
+</div>
+
+<div id="mapid"></div>
+
+
+{% endblock %}

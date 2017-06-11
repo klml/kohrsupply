@@ -1,0 +1,9 @@
+<ul class="transportlist">
+{% for transport in transports %}
+    <li id="{{ transport.id }}" class="transport getfet_{{ transport.getfet }}" >
+        <a class="icon_{{transport.contentClass}}" href="{% url 'transport' pk=transport.pk %}">
+        {% include "kohrsupply/transport_item.html" %}
+        </a>
+     </li>
+{% endfor %}
+</ul>

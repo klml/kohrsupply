@@ -1,0 +1,245 @@
+/* general */
+body{
+    font:normal 12px Arial, Helvetica;
+    margin:10px auto;
+    max-width:950px;
+    line-height:1.6;
+    font-size:18px;
+    color:#444;
+    padding:0 10px;
+}
+h1,h2,h3{line-height:1.2}
+h1,h2,h3,h4,h5,h6{padding:0; margin:3px 0 0 0;}
+
+p {
+    margin: 0;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+}
+
+/* proportions and main style */
+#header {
+    text-align: right;
+}
+
+#navigation {
+    background-color: #f5f5f5 ;
+    padding: 0 10px;
+}
+
+#content form label {
+  display:inline-block;
+  *display:inline;
+  width:10em;
+
+}
+
+form#userstate select,
+form#userstate input {
+    float: none;
+}
+
+#content form.post-form p {
+    clear: both;
+}
+
+/* transport  */
+.transport {
+    padding: 5px 10px;
+    }
+.transport h1 span {
+    font-size: 10px;
+}
+
+#mapid { height: 580px; }
+
+
+ul.transportlist a.thislink  {
+display: none;
+}
+
+
+/*states user and transports */
+
+#setuserstate { display: inline;}
+#setuserstate select {
+   background: transparent;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+}
+#setuserstate option {
+    height: 21px;
+    padding-left: 25px;
+    background-position: 1px 0 ;
+    background-repeat: no-repeat;
+}
+#setuserstate option[value="sleeping"] {
+    background-image: url('//img.klml.de/devel/ptap/ptap_sleeping__20.png') ;
+}
+#setuserstate option[value="carrying"] {
+    background-image: url('//img.klml.de/devel/ptap/ptap_carying__20.png') ;
+}
+#setuserstate option[value="flooding"] {
+    background-image: url('//img.klml.de/devel/ptap/ptap_flooding__20.png') ;
+}
+#setuserstate option[value="hubbing" ] {
+    background-image: url('//img.klml.de/devel/ptap/ptap_hubbing__20.png') ;
+}
+#setuserstate option[value="grabbing"] {
+    background-image: url('//img.klml.de/devel/ptap/ptap_grabbing__20.png') ;
+}
+#header .user {
+    padding-left: 5px;
+}
+
+/* transportlist */
+.transportlist {
+       padding: 0;
+    background-color: #fafafa;
+}
+.transportlist li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding: 0 7px;
+}
+.transportlist li hr {
+    color: #e5e5e5;
+}
+
+.getfet_sleeping {
+    border-left: 5px solid gray;
+}
+.getfet_carrying {
+    border-left: 5px solid #77AE9A;
+}
+.getfet_hubbing,
+.getfet_grabbing {
+    border-left: 5px solid #CF763A ;
+}
+.getfet_close {
+    border-left: 5px solid yellow ;
+}
+
+.holder,
+.recipient {
+    border-top: 1px solid #E5E5E5;
+    margin: 2px 0 0  0 ;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
+.gettfetter {
+    background-color:  #fff;
+    background-repeat: no-repeat ;
+    color: #000;
+    float: left;
+    padding-top: 35px;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-size: 10px;
+    width: 40px;
+    margin: 0 4px 4px 0;
+}
+.getfet_hubbing .gettfetter  {
+    background-image: url('//img.klml.de/devel/ptap/ptap_hubbing__35.png')  ;
+}
+.getfet_flooding .gettfetter  {
+    background-image: url('//img.klml.de/devel/ptap/ptap_flooding__35.png') ;
+}
+.getfet_grabbing .gettfetter  {
+    background-image: url('//img.klml.de/devel/ptap/ptap_grabbing__35.png') ;
+}
+.getfet_carrying .gettfetter  {
+    background-image: url('//img.klml.de/devel/ptap/ptap_carying__35.png') ;
+}
+.getfet_sleeping .gettfetter  {
+    background-image: url('//img.klml.de/devel/ptap/ptap_sleeping__35.png') ;
+}
+
+/* recipient label */
+.transport .recipient em {
+    padding: 3px 3px 3px 23px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    border: 1px solid gray;
+}
+.transport .recipient em small {
+    display: none;
+}
+.transport .recipientgetfet_hubbing em {
+    border-left: 5px solid #BF5103 ;
+    background-image: url('//img.klml.de/devel/ptap/ptap_hubbing_trns__18.png')  ;
+}
+.transport .recipientgetfet_flooding em {
+    border-left: 5px solid gray ;
+    background-image: url('//img.klml.de/devel/ptap/ptap_flooding_trns__18.png') ;
+}
+.transport .recipientgetfet_grabbing em {
+    border-left: 5px solid #CC7135 ;
+    background-image: url('//img.klml.de/devel/ptap/ptap_grabbing_trns__18.png') ;
+}
+.transport .recipientgetfet_sleeping em {
+    border-left: 5px solid gray ;
+    background-image: url('//img.klml.de/devel/ptap/ptap_sleeping_trns__18.png') ;
+}
+.transport .recipientgetfet_carrying em {
+    border-left: 5px solid #B0BC28 ;
+    background-image: url('//img.klml.de/devel/ptap/ptap_carying__18.png') ;
+}
+
+
+.recipientgetfet_sleeping,
+.recipientgetfet_flooding {
+    background-color: #e5e5e5; 
+}
+
+
+
+
+
+.distance2target{
+    float: right;
+    background-color: #428bca;
+    color: #fff;
+    padding: 0 4px;
+    margin: 0 0 2px 2px ;
+}
+.coords {
+ display: none;
+}
+
+.contentclass {
+}
+.people:before {
+    content: ''
+}
+.food:before {
+    content: ''
+}
+.warmfood:before {
+    content: ''
+}
+.nonfood:before {
+    content: ''
+}
+.garbage:before {
+    content: ''
+}
+.laundry:before {
+    content: ''
+}
+
+
+@media only screen and (max-width: 959px) {
+    #logo {
+        width: 70px;
+    }
+}

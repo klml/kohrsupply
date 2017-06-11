@@ -1,0 +1,54 @@
+{% extends "kohrsupply/base.html" %}
+
+transport_item.html
+{% block content %}
+
+<div class="transport singletransport getfet_{{ transport.getfet }}">
+
+    {% include "kohrsupply/transport_item.html" %}
+
+    {% if transport.currentHolder.id == user.id %}
+    YOU have this transport!
+    {% else %}
+    <form method="POST" id="taketransport" class="">
+        {% csrf_token %}
+        <input name="transport" value="take" type="hidden" />
+        <button id="savetrs" type="submit" class="save btn btn-default">I take this transport</button>
+    </form>
+    {% endif %}
+
+    <br />
+
+    {% if transport.author.id == user.id or transport.recipient.id == user.id or user.is_superuser %}
+    <a href="{% url 'transport_edit' pk=transport.pk %}">edit this transport</a>
+    {% endif %}
+
+    {% if transport.recipient.id == user.id %}
+    <hr class="cb" />
+
+        <form method="POST" id="closetransport" class="">
+            {% csrf_token %}
+            <input name="close" value="yes" type="hidden" />
+            <button id="savetrs" type="submit" class="save btn btn-default">close this transport</button>
+        </form>
+
+    {% endif %}
+
+    <hr class="cb" />
+    <h3>log</h3>
+    <div class="log">
+    <ul id="log">
+    {% for transportPass in transportPasses %}
+        <li >{{transportPass.newcurrentHolder }} at {{transportPass.location}} <em class="coords" >{{transportPass.locationLat}}, {{transportPass.locationLon}}</em></li>
+    {% endfor %}
+    </ul>
+    </div>
+
+    {% for transport.hubbingAroundRecipient in transport.hubbingAroundRecipients %}
+    transport.hubbingAroundRecipients
+    {% endfor %}
+
+</div>
+
+<div id="mapid"></div>
+{% endblock %}
