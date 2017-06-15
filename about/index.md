@@ -56,8 +56,3 @@ Transporte können entweder gerade unterwegs sein (carry), auf Abholung warten (
 ## Routing
 
 Wir machen kein Routing. Gern kann jemadn ein Routing per API anhängen. Aber erst mal klassiches Routing Ortsname oder per Postleitzahl.
-
-## Funktionen und Featurewunsche
-
-* Recipients haben eine Location, die sie udpaten, wenn sie das tun wird die Sendung an dei jewils aktuelel lactiongeroutet (wer das nicht will muss sich sleeping stellen) 
-
