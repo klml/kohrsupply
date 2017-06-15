@@ -18,10 +18,14 @@ kohrsupply ist ein Tool. Was ihr damit macht ist eurer Kreativität überlassen.
 
 ### warum
 
-Warum sollte ptpa funktionieren, es gibt doch viele andere [alternative Logistikansätze](http://regionales-wirtschaften-wiki.de/Netzlogistik_Abgrenzung)?
+Warum sollte kohr.supply funktionieren, es gibt doch viele andere [alternative Logistikansätze](http://regionales-wirtschaften-wiki.de/Netzlogistik_Abgrenzung)?
 
-Neben der Eigenschaft dass kohrsupply p2p ist und "Logistiklaien" ansprechen will ist vor allem wichtig das kohrsupply sich darauf konzentriert auch die einzelne Übergaben innehhalb der SupplyChainan fokusi
+Neben der Eigenschaft dass kohrsupply p2p ist und "Logistiklaien" ansprechen will ist vor allem wichtig das kohrsupply sich darauf konzentriert auch die einzelne Übergaben innerhalb der SupplyChainan fokusiert.
+
+Einen sehh  ähnlichen und schon wesentlich weiter implementierten Ansatz hat [PassLfix](http://pacifics.org/). PassLfix setzt vor allem auf die Blockchain. Ehrlich gesagt kommt es mir so vor als ob die [gehypte](http://blog.fefe.de/?q=Blockchain) bei der dezentralen Verfolgung von Paketen zum ersten mal richtig Sinn macht.
+Aber PassLfix setzt hier imho auf die technisch-mathematische Lösung des sozialen Vertrauensdefizits innerhalb einer dezentralen SupplyChain. kohrsupply will das lieber mit menschlichen [Vertrauensmechanismen](https://github.com/klml/kohrsupply/issues/1) lösen.
+
 
 ## Routing
 
-Wir machen kein Routing. Gern kann jemadn ein Routing per API anhängen. Aber erst mal klassiches Routing Ortsname oder per Postleitzahl.
+kohrsupply macht kein Routing. Das kann gern jemand  per API anhängen. Aber erst mal gibt es nur klassiches Routing mit Ortsnamen auf der Karte oder per Postleitzahl.
