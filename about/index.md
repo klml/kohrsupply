@@ -18,7 +18,7 @@ kohrsupply ist ein Tool. Was ihr damit macht ist eurer Kreativität überlassen.
 
 ## wie 
 
-[[kohrsupply ist freie software](https://github.com/klml/kohrsupply/)
+[kohrsupply ist freie software](https://github.com/klml/kohrsupply/)
 
 ### warum
 
