@@ -12,9 +12,13 @@ User können entweder:
 
 User du nur Ihre Pakete annehmen wollen sind im Status __grabbing__. Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__. 
 
-## Wer wie was
+## was
 
 kohrsupply ist ein Tool. Was ihr damit macht ist eurer Kreativität überlassen. Ob ihr Essen auf Rädern in der Nachbarschaft organisiert oder einen alternativen [deliverooo](https://deliveroo.de) aufmacht. Ob ihr Getränke an der Isar oder auf einem Festival routet, oder Umzugs Kartons als Mitfaherzentrale nach Hamburg mit nehmt, uns egal. Ob ihr das als nebenberufliche Geldquelle macht oder [Schenker](https://schenker.com) seit, alles cool. Ob ihr aus gamification [Punkte](./reputation) sammelt wie pokemon go oder einfach die Schönheit von effizienter Logistik liebt. kohrsupply ist das Internet für reale Güter, so wie das Internet mal gebaut war. Als Ort für Gleiche, clients oder citicens. Das bedeutet auch das man scheiß bauen kann.
+
+## wie 
+
+[[kohrsupply ist freie software](https://github.com/klml/kohrsupply/)
 
 ### warum
 
