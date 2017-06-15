@@ -3,14 +3,14 @@
 **kohr.supply** ist eine Crowd Logistik Anwendung um Sendungen von Personen an Personen zu befördern.  
 Das wichtigste dabei: auch die Beförderung von Teilstrecken sind möglich und sogar wichtig
 
-User können entweder
+User können entweder:
 
-*   Sendungen befördern (Status des Users und der Sendung 'carry'), jemand der transportiert muss nicht sagen wohin
+*   Sendungen befördern mit dem Status __carrying__ (jemand der transportiert muss aber nicht sagen wohin)
 *   Sendungen anbieten, dann sind die Status
-    *   Sendung ist getit
-    *   User ist 'hubing nehme alle' (fetal) oder 'hubing aber nur abgeben' (flood)
+    *   __hubbing__, wenn der user sowohl Transporte annimmt, also auch weiter abgibt.
+    *   __flodding__,  wenn der user seine Transporte abgeben will, aber keine mehr annehemen will.
 
-User du nur Ihre Pakete annehmen wollen sind 'ich nehme nur an mich an' (fetmy)
+User du nur Ihre Pakete annehmen wollen sind im Status __grabbing__. Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__. 
 
 ## Wer wie was
 
