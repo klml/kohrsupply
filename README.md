@@ -2,7 +2,7 @@
 
 kohrsupply is a platform to accompany and manage relays of physical transportations. Its a very alpha prototype for [ptarp](//github.com/klml/ptarp).
 
-You should send things from Alice to Bob, but transported from Carol, stocked by Erin, again transported by Frank to Peggy and finaly delivered by Wendy.
+You should send things from Alice to Bob, but transported from Carol, stocked by Erin, again transported by Frank to Peggy and finaly delivered by Wendy. Read more in [about](/about/index.md) (currently only in german)
 
 kohrsupply is made with [django](https://www.djangoproject.com/)
 
