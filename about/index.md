@@ -1,6 +1,6 @@
 # kohr.supply
 
-**kohr.supply** (Peer2PeerTrAnsport) ist eine Crowd Logistik Anwendung um Sendungen von Personen an Personen zu befördern.  
+**kohr.supply** ist eine Crowd Logistik Anwendung um Sendungen von Personen an Personen zu befördern.  
 Das wichtigste dabei: auch die Beförderung von Teilstrecken sind möglich und sogar wichtig
 
 User können entweder
@@ -59,5 +59,5 @@ Wir machen kein Routing. Gern kann jemadn ein Routing per API anhängen. Aber er
 
 ## Funktionen und Featurewunsche
 
-* Recipienst haben eine Location, die sie udpaten, wenn sie das tun wird die Sendung an dei jewils aktuelel lactiongeroutet (wer das nicht will muss sich sleeping stellen) 
-* feature wunsch: user können Sendungen an unterschiedlicehn Loactions mepfangen (und sind nur auf grabbing wenn sie an der ziel Destination sind )
+* Recipients haben eine Location, die sie udpaten, wenn sie das tun wird die Sendung an dei jewils aktuelel lactiongeroutet (wer das nicht will muss sich sleeping stellen) 
+
