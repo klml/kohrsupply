@@ -10,27 +10,26 @@
         {{ transport.distance2target }} km
     </div>
 
-    <div class="holder" title="Aktueller Besitzer">
+    <h2 class="holder carriergetfet_{{ transport.getfet }}" title="Aktueller Besitzer">
     {% load l10n %}
         {{ transport.currentLocation.locationname }}
 
-    <em>{{ transport.currentHolder }}({{ transport.currentHolderPoints.summa  }} )</em>
+    <em class="carrier" title="{{ transport.getfet }}" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa  }} )</em>
     <span class="coords">{{ transport.currentLocation.geoLat | unlocalize }}, {{ transport.currentLocation.geoLon | unlocalize }}</span>
-    </div>
+    </h2>
 
-    <div class="recipient recipientgetfet_{{ transport.recipientgetfet }}">
-    {{ transport.recipientLocation.locationname }} <em title="{{ transport.recipientgetfet }}"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
+    <h2 class="recipient carriergetfet_{{ transport.recipientgetfet }}">
+    {{ transport.recipientLocation.locationname }} <em class="carrier" title="{{ transport.recipientgetfet }}"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
 
-    
+
     <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
-    </div>
+    </h2>
 
 
+    <div class="contentDescription">
     <div id="qrcodeurl" class="right" ></div>
-
-    <p class="contentDescription">
     {{ transport.contentDescription }}
-    </p>
+    </div>
     <small>Klasse:</small> <span class="contentclass {{ transport.contentClass }}">{{ transport.contentClass }}</span> –
     <small>Größe:</small> {{ transport.contentSize }} –,
     <small>Gewicht:</small> {{ transport.contentWeight }}

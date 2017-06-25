@@ -4,13 +4,15 @@ body{
     margin:10px auto;
     max-width:950px;
     line-height:1.6;
-    font-size:18px;
     color:#444;
     padding:0 10px;
 }
 h1,h2,h3{line-height:1.2}
 h1,h2,h3,h4,h5,h6{padding:0; margin:3px 0 0 0;}
+h2 {
+    font-size:20px;
 
+}
 p {
     margin: 0;
 }
@@ -60,7 +62,11 @@ form#userstate input {
 
 
 ul.transportlist a.thislink  {
-display: none;
+    display: none;
+}
+ul.transportlist a  {
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -100,11 +106,10 @@ display: none;
 
 /* transportlist */
 .transportlist {
-       padding: 0;
+    padding: 0;
     background-color: #fafafa;
 }
 .transportlist li {
-    font-size: 14px;
     margin-bottom: 5px;
     list-style-type: none;
     padding: 0 7px;
@@ -140,11 +145,11 @@ display: none;
     background-repeat: no-repeat ;
     color: #000;
     float: left;
-    padding-top: 35px;
+    padding: 35px 25px 0 0;
     text-align: center;
     vertical-align: text-bottom;
     font-size: 10px;
-    width: 40px;
+    width: 25px;
     margin: 0 4px 4px 0;
 }
 .getfet_hubbing .gettfetter  {
@@ -164,40 +169,42 @@ display: none;
 }
 
 /* recipient label */
-.transport .recipient em {
+.transport em.carrier {
     padding: 3px 3px 3px 23px;
     margin-left: 10px;
     background-repeat: no-repeat;
-    background-position: 2px 2px;
+    background-position: 2px 1px;
     border: 1px solid gray;
+    font-size: 0.6em;
+    vertical-align: 5px;
 }
-.transport .recipient em small {
+.transport em.carrier small {
     display: none;
 }
-.transport .recipientgetfet_hubbing em {
+.transport .carriergetfet_hubbing em {
     border-left: 5px solid #BF5103 ;
     background-image: url('//img.klml.de/devel/ptap/ptap_hubbing_trns__18.png')  ;
 }
-.transport .recipientgetfet_flooding em {
+.transport .carriergetfet_flooding em {
     border-left: 5px solid gray ;
     background-image: url('//img.klml.de/devel/ptap/ptap_flooding_trns__18.png') ;
 }
-.transport .recipientgetfet_grabbing em {
+.transport .carriergetfet_grabbing em {
     border-left: 5px solid #CC7135 ;
     background-image: url('//img.klml.de/devel/ptap/ptap_grabbing_trns__18.png') ;
 }
-.transport .recipientgetfet_sleeping em {
+.transport .carriergetfet_sleeping em {
     border-left: 5px solid gray ;
     background-image: url('//img.klml.de/devel/ptap/ptap_sleeping_trns__18.png') ;
 }
-.transport .recipientgetfet_carrying em {
+.transport .carriergetfet_carrying em {
     border-left: 5px solid #B0BC28 ;
     background-image: url('//img.klml.de/devel/ptap/ptap_carying__18.png') ;
 }
 
 
-.recipientgetfet_sleeping,
-.recipientgetfet_flooding {
+.carriergetfet_sleeping,
+.carriergetfet_flooding {
     background-color: #e5e5e5; 
 }
 
@@ -215,6 +222,12 @@ display: none;
 .coords {
  display: none;
 }
+
+.contentDescription  {
+    clear: both; 
+    padding-top: 10px;
+}
+
 
 .contentclass {
 }
