@@ -10,16 +10,16 @@
         {{ transport.distance2target }} km
     </div>
 
-    <h2 class="holder carriergetfet_{{ transport.getfet }}" title="Aktueller Besitzer">
+    <h2 class="holder carriergetfet_{{ transport.getfet }}" title="This transport is at">
     {% load l10n %}
         {{ transport.currentLocation.locationname }}
 
-    <em class="carrier" title="{{ transport.getfet }}" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa  }} )</em>
+    <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa  }} )</em>
     <span class="coords">{{ transport.currentLocation.geoLat | unlocalize }}, {{ transport.currentLocation.geoLon | unlocalize }}</span>
     </h2>
 
-    <h2 class="recipient carriergetfet_{{ transport.recipientgetfet }}">
-    {{ transport.recipientLocation.locationname }} <em class="carrier" title="{{ transport.recipientgetfet }}"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
+    <h2 class="recipient carriergetfet_{{ transport.recipientgetfet }}" title="This transport should get to">
+    {{ transport.recipientLocation.locationname }} <em class="carrier" title="recipient is {{ transport.recipient }}, is currently {{ transport.recipientgetfet }} and has got {{ transport.recipientPoints.summa  }} points"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
 
 
     <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
