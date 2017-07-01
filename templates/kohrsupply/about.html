@@ -6,5 +6,8 @@
 
     {{ content | safe }}
 
+<hr />
+edit or fork on <a href="https://github.com/klml/kohrsupply/blob/master/about/{{ request.path | cut:'/about/' | cut:'/' }}.md">github</a>
+
 
 {% endblock %}
