@@ -67,7 +67,7 @@ function setmap() {
     $('.coords').each( function () {
         var coordinates = $(this).text().split(',') ;
         var pointDescription = $(this).parents('.transport, .location, .user').html() ;
-        var holderORrecipient = $(this).parents('div').attr('class').split(' ')[0] ; // get the first class
+        var holderORrecipient = $(this).parents('div, h2').attr('class').split(' ')[0] ; // get the first class
         marker = [ coordinates[0] , coordinates[1] ] ;
 
         var point = new L.LatLng( coordinates[0] , coordinates[1] );
