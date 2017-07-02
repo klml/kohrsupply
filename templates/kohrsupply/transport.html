@@ -7,6 +7,12 @@ transport_item.html
 
     {% include "kohrsupply/transport_item.html" %}
 
+    <br />
+    #{{ transport.id }} | 
+    Startpunkt: {{transport.origin }} bei {{ transport.sender }} um {{ transport.begin }} |
+    Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
+
+
     {% if transport.currentHolder.id == user.id %}
     YOU have this transport!
     {% else %}
