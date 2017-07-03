@@ -7,15 +7,35 @@ body{
     color:#444;
     padding:0 10px;
 }
+/* headings*/
 h1,h2,h3{line-height:1.2}
 h1,h2,h3,h4,h5,h6{padding:0; margin:3px 0 0 0;}
-h2 {
-    font-size:20px;
+h1{color:#000; font-size: 130%; }
+h2{color:#000; font-size: 120%; border-bottom: 1px solid gray;}
+h3{color:#000; font-size: 115%; }
+h4{color:#000; font-size: 110%; }
+h5{color:#000; font-size: 105%; }
+h6{color:#000; font-size: 105%; }
+h1+h2 {margin-top: 2px;}
+h2+h3 {margin-top: 2px;}
+h3+h4 {margin-top: 2px;}
+h4+h5 {margin-top: 2px;}
+h5+h6 {margin-top: 2px;}
 
-}
 p {
     margin: 0;
 }
+/*
+a { text-decoration: none; color: #4169E1; }
+a:hover { text-decoration: underline; }
+a:visited { color: #8470FF; }
+a:active, /* set class "active" for current pages*/
+*/
+a.active { color: #2E6465; }
+a[href^="#"] { font-style: italic; } /* anchor links staying on the current page */
+a[href^="http"] {text-decoration: underline;}
+a[href^="http"]:hover {text-decoration: none;}
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
