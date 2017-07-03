@@ -14,7 +14,7 @@
     {% load l10n %}
         {{ transport.currentLocation.locationname }}
 
-    <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa  }} )</em>
+    <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa }})</em>
     <span class="coords">{{ transport.currentLocation.geoLat | unlocalize }}, {{ transport.currentLocation.geoLon | unlocalize }}</span>
     </h2>
 
