@@ -10,6 +10,8 @@ class CreateTransport(forms.ModelForm):
             ("people", "People"),
             ("food", "Food"),
             ("warmfood", "Warm food"),
+            ("chilledfood", "chilled food"),
+            ("deepfrozenfood", "deep-frozen food"),
             ("laundry", "Laundry"),
             ("garbage", "Garbage"),
     )
