@@ -6,14 +6,14 @@ from django.contrib.auth.models import User
 class CreateTransport(forms.ModelForm):
 
     contentClasses = (
-            ("nonfood", "Non food"),
-            ("people", "People"),
-            ("food", "Food"),
-            ("warmfood", "Warm food"),
+            ("nonfood", "non food"),
+            ("people", "people"),
+            ("food", "food"),
+            ("warmfood", "warm food"),
             ("chilledfood", "chilled food"),
             ("deepfrozenfood", "deep-frozen food"),
-            ("laundry", "Laundry"),
-            ("garbage", "Garbage"),
+            ("laundry", "laundry"),
+            ("garbage", "garbage"),
     )
 
     holdername =            forms.CharField(    widget=forms.TextInput(attrs={'class': 'users'}))
