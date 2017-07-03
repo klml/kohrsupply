@@ -195,8 +195,10 @@ ul.transportlist a  {
     background-repeat: no-repeat;
     background-position: 2px 1px;
     border: 1px solid gray;
-    font-size: 0.6em;
+    font-size: 0.8em;
     vertical-align: 5px;
+    font-style: normal;
+    font-weight: normal;
 }
 .transport em.carrier small {
     display: none;
