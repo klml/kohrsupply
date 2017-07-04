@@ -7,7 +7,8 @@
     {{ content | safe }}
 
 <hr />
-edit or fork on <a href='https://github.com/klml/kohrsupply/blob/master/about/{% if request.path == "/about/" %}index{% else %}{{ request.path | cut:"/about/" | cut:"/" }}{% endif %}.md'>github</a>
+edit or fork this page on <a href='https://github.com/klml/kohrsupply/blob/master/about/{% if request.path == "/about/" %}index{% else %}{{ request.path | cut:"/about/" | cut:"/" }}{% endif %}.md'>github</a>
 
+<hr />
 
 {% endblock %}

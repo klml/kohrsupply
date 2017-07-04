@@ -150,8 +150,8 @@ function setqrcode() {
 
 function getlocal() {
     navigator.geolocation.getCurrentPosition(function(position) {
-        link = '?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&wide=1' ;
-        $('#getlocal').attr( 'href' , link );
+        link = '/?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&wide=1' ;
+        $('.getlocal').attr( 'href' , link );
     });
 };
 
@@ -179,7 +179,7 @@ jQuery(document).ready(function() {
     if (  $('.singletransport').length ) {
         setqrcode();
     };
-    setmap();
     getlocal();
+    setmap();
 
 });

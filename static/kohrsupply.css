@@ -54,6 +54,9 @@ a.button {
     padding: 0 10px;
 }
 
+#content  {
+    margin-top: 15px;
+}
 #content form label {
   display:inline-block;
   *display:inline;
@@ -280,9 +283,3 @@ ul.transportlist a  {
         width: 70px;
     }
 }
-
-
-
-
-
-
