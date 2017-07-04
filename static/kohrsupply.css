@@ -132,7 +132,8 @@ ul.transportlist a  {
 .transportlist li {
     margin-bottom: 5px;
     list-style-type: none;
-    padding: 0 7px;
+    padding: 1px 7px;
+    background-color: #fff;
 }
 .transportlist li hr {
     color: #e5e5e5;
@@ -160,9 +161,10 @@ ul.transportlist a  {
     padding-top: 4px;
 }
 
-.gettfetter {
+.signet {
     background-color:  #fff;
     background-repeat: no-repeat ;
+    background-size: 40px auto;
     color: #000;
     float: left;
     padding: 35px 25px 0 0;
@@ -172,20 +174,30 @@ ul.transportlist a  {
     width: 25px;
     margin: 0 4px 4px 0;
 }
-.getfet_hubbing .gettfetter  {
-    background-image: url('//img.klml.de/devel/ptap/ptap_hubbing__35.png')  ;
+
+.content_nonfood .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Octicons-package.svg/40px-Octicons-package.svg.png')  ;
 }
-.getfet_flooding .gettfetter  {
-    background-image: url('//img.klml.de/devel/ptap/ptap_flooding__35.png') ;
+.content_people .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Community_Noun_project_2280.svg/40px-Community_Noun_project_2280.svg.png')  ;
 }
-.getfet_grabbing .gettfetter  {
-    background-image: url('//img.klml.de/devel/ptap/ptap_grabbing__35.png') ;
+.content_food .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ravintola_724_tunnusosa.svg/40px-Ravintola_724_tunnusosa.svg.png')  ;
 }
-.getfet_carrying .gettfetter  {
-    background-image: url('//img.klml.de/devel/ptap/ptap_carying__35.png') ;
+.content_warmfood .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Cup_of_coffee.svg/40px-Cup_of_coffee.svg.png')  ;
 }
-.getfet_sleeping .gettfetter  {
-    background-image: url('//img.klml.de/devel/ptap/ptap_sleeping__35.png') ;
+.content_chilledfood .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Symbol_solid_precipitation_70.svg/40px-Symbol_solid_precipitation_70.svg.png')  ;
+}
+.content_deepfrozenfood .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Symbol_solid_precipitation_73.svg/40px-Symbol_solid_precipitation_73.svg.png')  ;
+}
+.content_laundry .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Rpb_clothing_icon.svg/40px-Rpb_clothing_icon.svg.png')  ;
+}
+.content_garbage .signet {
+    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/U%2B267A.svg/40px-U%2B267A.svg.png')  ;
 }
 
 /* recipient label */
@@ -231,9 +243,6 @@ ul.transportlist a  {
 }
 
 
-
-
-
 .distance2target{
     float: right;
     background-color: #428bca;
@@ -251,27 +260,19 @@ ul.transportlist a  {
     font-size: 1.2em;
 }
 
+.weight {
+    background: url('//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/PICOL_icon_Weight.svg/12px-PICOL_icon_Weight.svg.png') no-repeat 0px 0px #fff;
+    background-size: 12px ;
+    padding-left: 15px;
+    margin-left: 10px;
+}
+.size {
+    background: url('//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Simple_icon_table.svg/17px-Simple_icon_table.svg.png') no-repeat 0px 0px #fff;
+    background-size: 17px ;
+    padding-left: 20px;
+}
 
-.contentclass {
-}
-.people:before {
-    content: ''
-}
-.food:before {
-    content: ''
-}
-.warmfood:before {
-    content: ''
-}
-.nonfood:before {
-    content: ''
-}
-.garbage:before {
-    content: ''
-}
-.laundry:before {
-    content: ''
-}
+
 
 
 @media only screen and (max-width: 959px) {
@@ -279,3 +280,9 @@ ul.transportlist a  {
         width: 70px;
     }
 }
+
+
+
+
+
+

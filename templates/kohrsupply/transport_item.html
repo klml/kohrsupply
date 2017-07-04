@@ -1,7 +1,7 @@
 
-    <div class="gettfetter">
+    <div class="signet">
     {% if  transport.active %}
-        {{ transport.getfet }}
+        {{ transport.contentClass }}
     {% else %}
         closed
     {% endif %}
@@ -30,6 +30,6 @@
     <div id="qrcodeurl" class="right" ></div>
     {{ transport.contentDescription }}
     </div>
-    <small>Klasse:</small> <span class="contentclass {{ transport.contentClass }}">{{ transport.contentClass }}</span> –
-    <small>Größe:</small> {{ transport.contentSize }} –,
-    <small>Gewicht:</small> {{ transport.contentWeight }}
+
+    <span class="size" title="Größe">{{ transport.contentSize }}</span>
+    <span class="weight" title="Gewicht">{{ transport.contentWeight }}</span>

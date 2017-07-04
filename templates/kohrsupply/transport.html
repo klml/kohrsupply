@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="transport singletransport getfet_{{ transport.getfet }}">
+<div class="transport singletransport getfet_{{ transport.getfet }} content_{{ transport.contentClass }}">
 
     {% include "kohrsupply/transport_item.html" %}
 
@@ -11,9 +11,8 @@
     Startpunkt: {{transport.origin }} bei {{ transport.sender }} um {{ transport.begin }} |
     Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
 
-
     {% if transport.currentHolder.id == user.id %}
-    YOU have this transport!
+    <div class="notice">YOU have this transport!</div>
     {% else %}
     <form method="POST" id="taketransport" class="">
         {% csrf_token %}
