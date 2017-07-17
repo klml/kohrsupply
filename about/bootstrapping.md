@@ -15,5 +15,11 @@ Was könnte eine erste sinnvolle Anwendung sein?
 * es gibt zahltreiche, meist lokal aufgestellte __Einkauf Services__ ([Göttingen](https://www.einkaufsservice-goettingen.de), [Ostalb](https://www.einkaufsservice-ostalb.de), [Franken](http://www.bringbiene.de) etc.) die aber alle selbst ausliefern
 ** oder jemand baut einen __virtuellen Einkauf Services__ wo Kleinstverdiener einfach doppelt einkaufen, aber nicht selber liefern müssen.
 
+## Userbase
+Wichtig für das Vertrauen der Nutzer wäre auch eine vielleicht schon bestehende Userbasis 
+
+* facebook connector
+* [nebenan.de](https://nebenan.de) oder das amerikanische [nextdoor.com](https://nextdoor.de/) sind Nachbarschaftsforen, nicht so groß wie facebook, aber die Communities haben alle eine physische Nähe. 
+
 
 Wer mehr Ideen hat, gern an [all@kohr.supply](mailto:all@kohr.supply).   
