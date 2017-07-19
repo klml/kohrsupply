@@ -40,33 +40,6 @@ def transport_list(request):
     filterargs = { 'active' : True } 
     
 
-    # /?lat=48.1&lon=11.6&wide=6
-    if request.GET.get('lat') and request.GET.get('lon') :
-
-        lat = float( request.GET['lat'] )
-        lon = float( request.GET['lon'] )
-        wide = 0.17
-
-        if request.GET.get('wide') :
-            wide = float( request.GET['wide'] ) / 100 # avoid dots  in url
-
-        latrange = ( lat - wide , lat + wide )
-        lonrange = ( lon - wide , lon + wide )
-
-        geosearch.lat = lat
-        geosearch.lon = lon
-        geosearch.wide = wide
-        geosearch.latrange = latrange
-        geosearch.lonrange = lonrange
-
-        # get users sitting in location search area, to show their transport and themselve
-        userLocationsusers = TransportUserLocation.objects.filter( location__geoLat__range = latrange ).filter( location__geoLon__range = lonrange )
-
-
-        listuserLocationsusers = list( userLocationsusers.values_list('user',  flat=True ) )
-
-        filterargs.update ( { 'currentHolder__in' : listuserLocationsusers, 'recipient__in' : listuserLocationsusers } )
-
     # /?class=nonfood
     if request.GET.get('class')  :
         classes = request.GET['class']
@@ -83,10 +56,42 @@ def transport_list(request):
         filterargs = { }
 
 
+
+    # /?lat=48.1&lon=11.6&wide=6
+    if request.GET.get('lat') and request.GET.get('lon') :
+
+        lat = float( request.GET['lat'] )
+        lon = float( request.GET['lon'] )
+        wide = 0.17
+
+        if request.GET.get('wide') :
+            wide = float( request.GET['wide'] ) 
+
+        latlonrange(lat, lon, wide, geosearch, filterargs )
+
     transports = Transport.objects.filter( **filterargs ).order_by('-id').select_related()[:100]
+
     buildTransports( transports )
 
     return render(request, 'kohrsupply/transports.html',  { 'transports': transports , 'userLocationsusers' : userLocationsusers , 'geosearch' : geosearch  })
+
+
+def latlonrange( lat, lon, wide, geosearch, filterargs ):
+
+    wide = wide / 100 # avoid dots  in url
+    latrange = ( lat - wide , lat + wide )
+    lonrange = ( lon - wide , lon + wide )
+
+    geosearch.lat = lat
+    geosearch.lon = lon
+    geosearch.wide = wide
+    geosearch.latrange = latrange
+    geosearch.lonrange = lonrange
+
+    # get users sitting in location search area, to show their transport and themselve
+    userLocationsusers = TransportUserLocation.objects.filter( location__geoLat__range = latrange ).filter( location__geoLon__range = lonrange )
+    listuserLocationsusers = list( userLocationsusers.values_list('user',  flat=True ) )
+    filterargs.update ( { 'currentHolder__in' : listuserLocationsusers, 'recipient__in' : listuserLocationsusers } )
 
 
 def transport(request, pk ):
