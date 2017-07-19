@@ -22,7 +22,7 @@ Mehr zum Thema [Mitmachen](/about/mitmachen/).
 
 ## warum
 
-Warum sollte kohr.supply funktionieren, es gibt doch viele andere [alternative Logistikansätze](./about/nicht)?
+Warum sollte kohr.supply funktionieren, es gibt doch viele andere [alternative Logistikansätze](./nicht)?
 
 
 ## was
