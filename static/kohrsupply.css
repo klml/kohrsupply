@@ -167,10 +167,10 @@ ul.transportlist a  {
 .signet {
     background-color:  #fff;
     background-repeat: no-repeat ;
-    background-size: 40px auto;
+    background-size: 50px auto;
     color: #000;
     float: left;
-    padding: 35px 25px 0 0;
+    padding: 53px 25px 0 0;
     text-align: center;
     vertical-align: text-bottom;
     font-size: 10px;
@@ -179,29 +179,30 @@ ul.transportlist a  {
 }
 
 .content_nonfood .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Octicons-package.svg/40px-Octicons-package.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/non_food_icon__50.png')  ;
 }
 .content_people .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Community_Noun_project_2280.svg/40px-Community_Noun_project_2280.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/people_icon__50.png')  ;
 }
 .content_food .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ravintola_724_tunnusosa.svg/40px-Ravintola_724_tunnusosa.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/food_icon__50.png')  ;
 }
 .content_warmfood .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Cup_of_coffee.svg/40px-Cup_of_coffee.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/warm_food_icon__50.png')  ;
 }
 .content_chilledfood .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Symbol_solid_precipitation_70.svg/40px-Symbol_solid_precipitation_70.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/chilled_food_icon__50.png')  ;
 }
 .content_deepfrozenfood .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Symbol_solid_precipitation_73.svg/40px-Symbol_solid_precipitation_73.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/frozen_food_icon__50.png')  ;
 }
 .content_laundry .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Rpb_clothing_icon.svg/40px-Rpb_clothing_icon.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/laundry_icon__50.png')  ;
 }
 .content_garbage .signet {
-    background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/U%2B267A.svg/40px-U%2B267A.svg.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/garbage_icon__50.png')  ;
 }
+
 
 /* recipient label */
 .transport em.carrier {
