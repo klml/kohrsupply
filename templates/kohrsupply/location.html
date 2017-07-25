@@ -69,7 +69,13 @@
     {% endfor  %}
     
     <hr class="cb" />
-    <a href="?delete={{ location.id }}" title="delete">delete!</a>
+    {% if location.author.id == user.id %}
+    <form method="POST">
+        {% csrf_token %}
+        <input name="delete" type="hidden" value="yes" />
+        <button>delete</button>
+    </form>
+    {% endif %}
 
     <hr class="cb" />
 </div>

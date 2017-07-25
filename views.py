@@ -170,8 +170,8 @@ def location(request, pk=None):
         currentTransports.append(   Transport.objects.filter( active = True ).filter( currentHolder = locationUserTransport.user ) )
         recipientTransports.append( Transport.objects.filter( active = True ).filter( recipient =     locationUserTransport.user ) )
 
-    if request.GET.get('delete') and request.user:
-        u = TransportLocation.objects.get( id = request.GET['delete'] ).delete()
+    if request.POST.get('delete') and request.user == thisLocation.author :
+        u = thisLocation .delete()
 
     return render(request, 'kohrsupply/location.html', { 'location' : thisLocation , 'currentTransports' : currentTransports , 'recipientTransports' : recipientTransports , 'locationUserTransports' : locationUserTransports } )
 
