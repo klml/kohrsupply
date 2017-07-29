@@ -7,6 +7,7 @@ Aber wie könnte man die kritische Masse erreichen? Es braucht entweder Idealist
 Was könnte eine erste sinnvolle Anwendung sein?
 
 * Braucht das [openfoodnetwork](https://openfoodnetwork.org) nicht noch eine Transportschicht unten drunter?
+* [atalanda](//atalanda.com) eine Shopplattform für regionale Händler, sogar mit Same Day Delivery, wer also noch klassisch einkauft kann gleich regional, crowd-same-day-delivern.
 * Besucherinnen von __Festivals__ sind meist auf einem begrenzten Zeitraum, auf einer begrenzten Fläche unter oft logistischen schwierigen Bedingungen. Auf einem Festival braucht man ständig irgendwas, was man sich gegenseitig, auch dem Zeltnachbar mitbringen kann. Aber viellicht dehnt man dann kohr.supply auf auch das die An- und Abreise davor und dannach aus.  
 * oder es gibt ein Startup das einen offene, [fairen](http://www.sueddeutsche.de/wirtschaft/radkuriere-fuer-cent-trinkgeld-durch-den-regen-1.3565389), weil effizenterern, Lieferdienst aufmacht. Was Foodora, deliveroo, der klassische Pizzabote, [Alkoport](http://www.alkoport.de/) oder Essen auf Rädern alle hintereinander können, kann kohr.supply parallel. Allerdings sind Lebensmittel meist zeitkritische Lieferungen, denn wer will schon mit Hunger im Bauch sehen das die Pizza an einem Hub zwei Straßen weiter kalt wird.
 * erst mal denk man an die __etablierten Paket Logistiker__ DHL, UPS, Hermes, DPD, GLS und Co. Aber ist es nicht deren Geschäftsmodell einzeln zu zu arbeiten? 
