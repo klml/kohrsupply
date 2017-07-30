@@ -38,8 +38,8 @@ def transport_list(request):
     userLocationsusers = latrange = lonrange = ''
     listuserLocationsusers = []
     filterargsTransport = { 'active' : True } 
-    filterargsLocationUser = { } 
-    
+    filterargsLocationUser = { }
+
 
     # /?class=nonfood
     if request.GET.get('class')  :
@@ -68,7 +68,17 @@ def transport_list(request):
         if request.GET.get('wide') :
             wide = float( request.GET['wide'] ) 
 
-        latlonrange(lat, lon, wide, geosearch, filterargsTransport, filterargsLocationUser )
+        transportscount = 0 # to while at least 1 time calling latlonrange 
+        while transportscount == 0 :
+            latlonrange(lat, lon, wide , geosearch, filterargsTransport, filterargsLocationUser )
+
+            # # zoomout
+            # stretch your requested area until you get at least one trensport 
+            if request.GET.get('zoomout') :
+                transportscount = Transport.objects.filter( **filterargsTransport ).count()
+                wide = wide + 1
+            else :
+                break
 
     userLocationsusers = TransportUserLocation.objects.filter(  **filterargsLocationUser  )
     transports = Transport.objects.filter( **filterargsTransport ).order_by('-id').select_related()[:100]
@@ -94,7 +104,7 @@ def latlonrange( lat, lon, wide, geosearch, filterargsTransport, filterargsLocat
     # TODO doublicate query
     userLocationsusers = TransportUserLocation.objects.filter( location__geoLat__range = latrange ).filter( location__geoLon__range = lonrange )
     listuserLocationsusers = list( userLocationsusers.values_list('user',  flat=True ) )
-    filterargsTransport.update ( { 'currentHolder__in' : listuserLocationsusers, 'recipient__in' : listuserLocationsusers } )
+    filterargsTransport.update ( { 'currentHolder__in' : listuserLocationsusers } )
 
     filterargsLocationUser.update ( { 'location__geoLat__range' : latrange, 'location__geoLon__range' : lonrange } )
 

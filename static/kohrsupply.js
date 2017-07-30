@@ -150,7 +150,7 @@ function setqrcode() {
 
 function getlocal() {
     navigator.geolocation.getCurrentPosition(function(position) {
-        link = '/?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&wide=1' ;
+        link = '/?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&wide=1&zoomout=1' ;
         $('.getlocal').attr( 'href' , link );
     });
 };
