@@ -1,15 +1,23 @@
 
-## punkte
+## Punkte
 
 Jede Transportübergabe gibt dem carrier __Punkte__.
 
 ## bounty
 
-as in http://stackoverflow.com/help/bounty
+Derzeit gibt es noch keine Bezahlung. Aber man könnte
+* eigene Punkte als Belohung vergeben, so macht [stackoverflow](http://stackoverflow.com/help/bounty) das.
+* wirklich Geld bezahlen
+
+### Letzte und erste Meile
+
+Am ersten Abgabepunkt oder beim Empfänger kann der Sender oder der Empfänger den Transporteur direkt bezahlen
+kohr.supply bietet <strike>nur</strike> [noch nicht](./features) die Möglichkeit an den Preis für beide einzutragen.
+
 
 ### bounty kette
 
-Eine **bounty kette** ergibt sich dann wenn ein Empfänger ein bounty auf eine Sendung auslobt die mehrere hubs weit weg ist. Aber dann der nächste hub ebenfalls ein, niedroigeres, bounty auslobt, der nächste hub wieder, bis man den Weg von der Sendung zum empfänger mit bounties belegt hat. Diese vorgehen ist explzit erlaubt
+Eine **bounty kette** ergibt sich dann wenn ein Empfänger ein bounty auf eine Sendung auslobt die mehrere hubs weit weg ist. Aber dann der nächste hub ebenfalls ein, niedrigeres, bounty auslobt, der nächste hub wieder, bis man den Weg von der Sendung zum empfänger mit bounties belegt hat. Diese Vorgehen ist explizit erlaubt.
 
 ## Businessmodell
 
