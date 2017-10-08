@@ -11,38 +11,38 @@
 <body class="user_{{ user }}">
 
     <div id="header" class="cb">
-        <a href="/" ><img src="//img.klml.de/devel/ptap/kohr_supply_logo__200.png" id="logo" class="left" /></a>
+        <a href="/" id="logo" class="left" ><img src="//img.klml.de/devel/ptap/kohr_supply_logo__200.png" /></a>
 
-    {% if user.is_authenticated %}
-        <span>
-            <span class="user getfet_{{ requestUserStatestate }}">{{ user }}&nbsp;is</span> 
-            <form method="POST" id="setuserstate" >
-                {% csrf_token %} 
-                {{userstateform.errors}}
-                {{userstateform.getfet}}
-                <button id="savetrs" type="submit" class="save btn btn-default">change</button>
-            </form>
-        </span>
-        <span>
-            {% load nbsp %}
-            in&nbsp;<a href="/location/{{ usersLocations.location.id }}" >{{ usersLocations.location.locationname | nbsp }}</a>
-        </span>
-
-    {% else %}
-
-
-        <p class="right"><a href="/about/mitmachen/">Howto join</a>? </a>Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
-    {% endif %}
-    </div>
-    <br class="cb" />
-    <div id="navigation">
+        <div id="personal">
         {% if user.is_authenticated %}
-        <a href="/transport/edit/" >new transport</a> |
+            <span>
+                <span class="user getfet_{{ requestUserStatestate }}">{{ user }}&nbsp;is</span> 
+                <form method="POST" id="setuserstate" >
+                    {% csrf_token %} 
+                    {{userstateform.errors}}
+                    {{userstateform.getfet}}
+                    <button id="savetrs" type="submit" class="save btn btn-default">change</button>
+                </form>
+            </span>
+            <span>
+                {% load nbsp %}
+                in&nbsp;<a href="/location/{{ usersLocations.location.id }}" >{{ usersLocations.location.locationname | nbsp }}</a>
+            </span>
+
+        {% else %}
+            <p class="right"><a href="/about/mitmachen/">Howto join</a>? </a>Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
         {% endif %}
-        <a href="/locations" >all locations</a>
-        {% if user.is_authenticated %}
-        | <a href="/carrier/{{ user.id }}" >my</a> 
-        {% endif %}
+        </div>
+        <br class="cb" />
+        <div id="navigation">
+            {% if user.is_authenticated %}
+            <a href="/transport/edit/" >new transport</a> |
+            {% endif %}
+            <a href="/locations" >all locations</a>
+            {% if user.is_authenticated %}
+            | <a href="/carrier/{{ user.id }}" >my</a> 
+            {% endif %}
+        </div>
     </div>
 
     {% if messages %}
