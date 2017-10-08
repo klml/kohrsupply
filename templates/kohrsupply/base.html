@@ -15,7 +15,7 @@
 
         <div id="personal">
         {% if user.is_authenticated %}
-            <span>
+            <span class="right">
                 <span class="user getfet_{{ requestUserStatestate }}">{{ user }}&nbsp;is</span> 
                 <form method="POST" id="setuserstate" >
                     {% csrf_token %} 
@@ -23,14 +23,13 @@
                     {{userstateform.getfet}}
                     <button id="savetrs" type="submit" class="save btn btn-default">change</button>
                 </form>
-            </span>
-            <span>
                 {% load nbsp %}
                 in&nbsp;<a href="/location/{{ usersLocations.location.id }}" >{{ usersLocations.location.locationname | nbsp }}</a>
             </span>
 
         {% else %}
-            <p class="right"><a href="/about/mitmachen/">Howto join</a>? </a>Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
+            <a href="/about" class="about">p2p & relaying logistics</a>
+            <p class="right">Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
         {% endif %}
         </div>
         <br class="cb" />
@@ -41,6 +40,7 @@
             <a href="/locations" >all locations</a>
             {% if user.is_authenticated %}
             | <a href="/carrier/{{ user.id }}" >my</a> 
+            | <a href="/about" class="">how to?</a>
             {% endif %}
         </div>
     </div>
@@ -57,7 +57,7 @@
         {% block content %}{% endblock %}
     </div>
 
-<a href="/about">about</a> | 
+<a href="/about" class="about" >about</a> | 
 <a href="/transports?all=all">all transport</a>
 
     {% block login %}
