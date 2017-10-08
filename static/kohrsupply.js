@@ -157,6 +157,11 @@ function getlocal() {
 
 jQuery(document).ready(function() {
 
+    $('#log').hide();
+    $('.log h3').click( function() {
+        $('#log').toggle();
+    });
+
     if( typeof user != "undefined" ) {
         $('form.transport_None #id_holdername').val( user.user_name );
     };
