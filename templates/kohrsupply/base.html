@@ -28,7 +28,7 @@
             </span>
 
         {% else %}
-            <a href="/about" class="about">p2p & relaying logistics</a>
+            <a href="/about" class="about" title="kohr.supply is a p2p and relaying logistic platform" >p2p & relaying logistics</a>
             <p class="right">Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
         {% endif %}
         </div>
@@ -40,7 +40,7 @@
             <a href="/locations" >all locations</a>
             {% if user.is_authenticated %}
             | <a href="/carrier/{{ user.id }}" >my</a> 
-            | <a href="/about" class="">how to?</a>
+            | <a href="/about" class="" title="kohr.supply is a p2p and relaying logistic platform">how to?</a>
             {% endif %}
         </div>
     </div>
