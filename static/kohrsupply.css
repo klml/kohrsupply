@@ -241,19 +241,22 @@ ul.transportlist a  {
     display: none;
 }
 .transport .carriergetfet_hubbing em {
-    background-image: url('//img.klml.de/devel/ptap/ptap_hubbing_trns__18.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_hubbing_white__18.png')  ;
 }
 .transport .carriergetfet_flooding em {
-    background-image: url('//img.klml.de/devel/ptap/ptap_flooding_trns__18.png') ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_flodding_white__18.png') ;
 }
 .transport .carriergetfet_grabbing em {
-    background-image: url('//img.klml.de/devel/ptap/ptap_grabbing_trns__18.png') ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_grabbing_white__18.png') ;
 }
 .transport .carriergetfet_sleeping em {
-    background-image: url('//img.klml.de/devel/ptap/ptap_sleeping_trns__18.png') ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_sleeping_white__18.png') ;
 }
 .transport .carriergetfet_carrying em {
-    background-image: url('//img.klml.de/devel/ptap/ptap_carying__18.png') ;
+/*
+    background-image: url('//img.klml.de/devel/ptap/kohr_carrying_white__18.png') ;
+*/
+    background-image: url('//img.klml.de/devel/ptap/kohr_carrying_green__18.png') ;
 }
 
 .carriergetfet_sleeping,
