@@ -7,7 +7,7 @@ Neben der Eigenschaft dass kohrsupply p2p ist und "Logistiklaien" ansprechen wil
 * [cocarrier.de](https://cocarrier.de), [canubring.com](http://www.canubring.com), [piggybee.com](https://www.piggybee.com), [bringwasmit.de](https://www.bringwasmit.de) oder auch [amazon: On my way](https://www.logistik-watchblog.de/unternehmen/286-amazon-pakete-privatpersonen-liefern.html) vernetzen auch Privatpersonen, aber alle nur als Ende-zu-Ende Lieferung, aber ohne die Möglichkeit zu [hubben](/about/mitmachen).
 
 
-## Technologe
+## Technologie
 In der Logistik gibt es soviele kreativen Umgeng mit neuen Ideen und Technologie.
 
 * kohr.supply hat keine RFID oder NFC Chips (zwingend) in den Päckchen, wie z.B. [blik.io](https://www.blik.io): kohr.supply braucht nur die Sendungsnummer (am besten die ganze URL). Die kann man per abschreiben, QR code scannen oder auch per RFID oder NFC übergeben. 
