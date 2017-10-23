@@ -3,7 +3,7 @@
 Wie kann man bei [kohr.supply](/about/) __mitmachen__?
 Generell braucht man ein [Nutzerkonto](/signup).
 
-## Als Lieferant
+## Lieferant
 ![carrying](http://img.klml.de/devel/ptap/ptap_carying__80.png#right)
 Wer Lieferungen ausliefern will:
 
@@ -16,7 +16,7 @@ Wer Lieferungen ausliefern will:
 
 Darauf auchten das der (Zwischen)-Empfänger auch die Lieferung übernimmt.
 
-## Als Hubbing
+## Hubbing
 ![hubbing](http://img.klml.de/devel/ptap/ptap_hubbing__80.png#right)
 
 Wer Lieferungen bei sich umschlagen will:
@@ -48,5 +48,4 @@ Wer ganz klassische Lieferungen senden oder empfangen will, der:
     * 'closed' dann die Lieferung
 
 
-Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__ ![sleeping](http://img.klml.de/devel/ptap/ptap_sleeping__15.png)
-. 
+Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__ ![sleeping](http://img.klml.de/devel/ptap/ptap_sleeping__15.png).
