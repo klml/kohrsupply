@@ -27,3 +27,7 @@ Warum sollte kohr.supply funktionieren, es gibt doch viele andere [alternative L
 ## was
 
 kohrsupply soll ein Tool [werden](./bootstrapping). Was ihr damit macht ist eurer Kreativität überlassen. Ob ihr Essen auf Rädern in der Nachbarschaft organisiert oder einen alternativen [deliverooo](https://deliveroo.de) aufmacht. Ob ihr Getränke an der Isar oder auf einem Festival routet, oder Umzugs Kartons als Mitfaherzentrale nach Hamburg mit nehmt, uns egal. Ob ihr das als nebenberufliche Geldquelle macht oder [Schenker](https://schenker.com) seit, alles cool. Ob ihr aus gamification [Punkte](./reputation) sammelt wie pokemon go oder einfach die Schönheit von effizienter Logistik liebt. kohrsupply ist das Internet für reale Güter, so wie das Internet mal gebaut war. Als Ort für Gleiche, clients oder citicens. Das bedeutet auch das man scheiß bauen kann aber bitte nicht sollte.
+
+## wer
+
+the legal mumbo jumbo: [kohr.supply](//kohr.supply) is maintained by [Klaus Mueller](//klml.de) <earth@klml.de>
