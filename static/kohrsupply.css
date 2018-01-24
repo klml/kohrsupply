@@ -18,12 +18,12 @@ body{
 /* headings*/
 h1,h2,h3{line-height:1.2}
 h1,h2,h3,h4,h5,h6{padding:0; margin:3px 0 0 0;}
-h1{color:#000; font-size: 150%; }
-h2{color:#000; font-size: 140%; }
-h3{color:#000; font-size: 130%; }
-h4{color:#000; font-size: 120%; }
-h5{color:#000; font-size: 110%; }
-h6{color:#000; font-size: 105%; }
+h1{color:#000; font-size: 120%; }
+h2{color:#000; font-size: 110%; }
+h3{color:#000; font-size: 106%; }
+h4{color:#000; font-size: 104%; }
+h5{color:#000; font-size: 102%; }
+h6{color:#000; font-size: 101%; }
 h1+h2 {margin-top: 2px;}
 h2+h3 {margin-top: 2px;}
 h3+h4 {margin-top: 2px;}
@@ -59,6 +59,7 @@ a.button {
     max-width: 950px; /* like wrapper */
     width: 100%;
     top: 0;
+    font-size: 0.9em;
 }
 #header #personal {
     text-align: center;
@@ -70,7 +71,7 @@ a.button {
 }
 
 #content  {
-    margin-top: 10em;
+    margin-top: 7em;
 }
 #content form label {
   display:inline-block;
@@ -90,7 +91,6 @@ form#userstate input {
 #header a.about {
     color: #000;
     line-height: 50px;
-    font-size: 120%;
     padding: 5px 10px;
     background: #c2e2d4;
     text-decoration: none;
@@ -277,7 +277,6 @@ span.coords {
 
 .contentDescription  {
     padding-top: 10px;
-    font-size: 1.2em;
 }
 
 .weight {
