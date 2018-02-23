@@ -29,7 +29,7 @@
 
         {% else %}
             <a href="/about" class="about" title="kohr.supply is a p2p and relaying logistic platform" >p2p & relaying logistics</a>
-            <p class="right">Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
+            <p class="right">Please <a href="{% url 'kohrsupply:login' %}" accesskey="l" >login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
         {% endif %}
         </div>
         <br class="cb" />
@@ -63,7 +63,7 @@
     {% block login %}
         <p class="right">
         {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">logout</a>
+            <a href="{% url 'logout' %}" accesskey="l" >logout</a>
         {% else %}
             Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.
         {% endif %}
