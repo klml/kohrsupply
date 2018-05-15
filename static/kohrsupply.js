@@ -150,12 +150,17 @@ function setqrcode() {
 
 function getlocal() {
     navigator.geolocation.getCurrentPosition(function(position) {
-        link = '/?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&wide=1' ;
+        link = '/?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&wide=1&zoomout=1' ;
         $('.getlocal').attr( 'href' , link );
     });
 };
 
 jQuery(document).ready(function() {
+
+    $('#log').hide();
+    $('.log h3').click( function() {
+        $('#log').toggle();
+    });
 
     if( typeof user != "undefined" ) {
         $('form.transport_None #id_holdername').val( user.user_name );

@@ -1,6 +1,14 @@
 /* general */
+/*
+#dde581 
+#c2e2d4
+
+#c7d42d
+#99cfb8
+
+*/
 body{
-    font:normal 12px Arial, Helvetica;
+    font:normal 18px Arial, Helvetica;
     margin:10px auto;
     max-width:950px;
     line-height:1.6;
@@ -10,12 +18,12 @@ body{
 /* headings*/
 h1,h2,h3{line-height:1.2}
 h1,h2,h3,h4,h5,h6{padding:0; margin:3px 0 0 0;}
-h1{color:#000; font-size: 150%; }
-h2{color:#000; font-size: 140%; border-bottom: 1px solid gray;}
-h3{color:#000; font-size: 130%; }
-h4{color:#000; font-size: 120%; }
-h5{color:#000; font-size: 110%; }
-h6{color:#000; font-size: 105%; }
+h1{color:#000; font-size: 120%; }
+h2{color:#000; font-size: 110%; }
+h3{color:#000; font-size: 106%; }
+h4{color:#000; font-size: 104%; }
+h5{color:#000; font-size: 102%; }
+h6{color:#000; font-size: 101%; }
 h1+h2 {margin-top: 2px;}
 h2+h3 {margin-top: 2px;}
 h3+h4 {margin-top: 2px;}
@@ -46,16 +54,24 @@ a.button {
 
 /* proportions and main style */
 #header {
-    text-align: right;
+    position: fixed;
+    background: #fff;
+    max-width: 950px; /* like wrapper */
+    width: 100%;
+    top: 0;
+    font-size: 0.9em;
 }
-
-#navigation {
+#header #personal {
+    text-align: center;
+    padding-right: 25px;
+}
+#header #navigation {
     background-color: #f5f5f5 ;
     padding: 0 10px;
 }
 
 #content  {
-    margin-top: 15px;
+    margin-top: 7em;
 }
 #content form label {
   display:inline-block;
@@ -72,10 +88,21 @@ form#userstate input {
 #content form.post-form p {
     clear: both;
 }
+#header a.about {
+    color: #000;
+    line-height: 50px;
+    padding: 5px 10px;
+    background: #c2e2d4;
+    text-decoration: none;
+}
 
 /* transport  */
 .transport {
     padding: 5px 10px;
+    background-color: #dde581;
+    background-color: #c2e2d4;
+    border-bottom: 2px solid #fff;
+
     }
 .transport h1 span {
     font-size: 10px;
@@ -91,6 +118,52 @@ ul.transportlist a  {
     text-decoration: none;
     color: inherit;
 }
+.signetdistance {
+    float: left;
+    width: 85px;
+    min-height: 115px; 
+    border-right: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.signet {
+    background-repeat: no-repeat ;
+    background-size: 50px auto;
+    background-position: 13px 15px;
+    color: #000;
+    color: transparent;
+    padding: 53px 25px 0 0;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-size: 10px;
+    margin: 0 4px 4px 0;
+}
+
+.content_nonfood .signet {
+    background-image: url('//img.klml.de/devel/ptap/non_food_icon__50.png')  ;
+}
+.content_people .signet {
+    background-image: url('//img.klml.de/devel/ptap/people_icon__50.png')  ;
+}
+.content_food .signet {
+    background-image: url('//img.klml.de/devel/ptap/food_icon__50.png')  ;
+}
+.content_warmfood .signet {
+    background-image: url('//img.klml.de/devel/ptap/warm_food_icon__50.png')  ;
+}
+.content_chilledfood .signet {
+    background-image: url('//img.klml.de/devel/ptap/chilled_food_icon__50.png')  ;
+}
+.content_deepfrozenfood .signet {
+    background-image: url('//img.klml.de/devel/ptap/frozen_food_icon__50.png')  ;
+}
+.content_laundry .signet {
+    background-image: url('//img.klml.de/devel/ptap/laundry_icon__50.png')  ;
+}
+.content_garbage .signet {
+    background-image: url('//img.klml.de/devel/ptap/garbage_icon__50.png')  ;
+}
+
 
 
 /*states user and transports */
@@ -136,73 +209,22 @@ ul.transportlist a  {
     margin-bottom: 5px;
     list-style-type: none;
     padding: 1px 7px;
-    background-color: #fff;
 }
 .transportlist li hr {
     color: #e5e5e5;
 }
 
-.getfet_sleeping {
-    border-left: 5px solid gray;
-}
-.getfet_carrying {
-    border-left: 5px solid #77AE9A;
-}
-.getfet_hubbing,
-.getfet_grabbing {
-    border-left: 5px solid #CF763A ;
-}
-.getfet_close {
-    border-left: 5px solid yellow ;
-}
-
 .holder,
 .recipient {
-    border-top: 1px solid #E5E5E5;
     margin: 2px 0 0  0 ;
     font-weight: bold;
     padding-top: 4px;
 }
-
-.signet {
-    background-color:  #fff;
-    background-repeat: no-repeat ;
-    background-size: 50px auto;
-    color: #000;
-    float: left;
-    padding: 53px 25px 0 0;
-    text-align: center;
-    vertical-align: text-bottom;
-    font-size: 10px;
-    width: 25px;
-    margin: 0 4px 4px 0;
+.holder span,
+.recipient span {
+    display: inline-block;
+    min-width: 15em;
 }
-
-.content_nonfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/non_food_icon__50.png')  ;
-}
-.content_people .signet {
-    background-image: url('//img.klml.de/devel/ptap/people_icon__50.png')  ;
-}
-.content_food .signet {
-    background-image: url('//img.klml.de/devel/ptap/food_icon__50.png')  ;
-}
-.content_warmfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/warm_food_icon__50.png')  ;
-}
-.content_chilledfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/chilled_food_icon__50.png')  ;
-}
-.content_deepfrozenfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/frozen_food_icon__50.png')  ;
-}
-.content_laundry .signet {
-    background-image: url('//img.klml.de/devel/ptap/laundry_icon__50.png')  ;
-}
-.content_garbage .signet {
-    background-image: url('//img.klml.de/devel/ptap/garbage_icon__50.png')  ;
-}
-
 
 /* recipient label */
 .transport em.carrier {
@@ -210,7 +232,6 @@ ul.transportlist a  {
     margin-left: 10px;
     background-repeat: no-repeat;
     background-position: 2px 1px;
-    border: 1px solid gray;
     font-size: 0.8em;
     vertical-align: 5px;
     font-style: normal;
@@ -220,26 +241,23 @@ ul.transportlist a  {
     display: none;
 }
 .transport .carriergetfet_hubbing em {
-    border-left: 5px solid #BF5103 ;
-    background-image: url('//img.klml.de/devel/ptap/ptap_hubbing_trns__18.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_hubbing_white__18.png')  ;
 }
 .transport .carriergetfet_flooding em {
-    border-left: 5px solid gray ;
-    background-image: url('//img.klml.de/devel/ptap/ptap_flooding_trns__18.png') ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_flodding_white__18.png') ;
 }
 .transport .carriergetfet_grabbing em {
-    border-left: 5px solid #CC7135 ;
-    background-image: url('//img.klml.de/devel/ptap/ptap_grabbing_trns__18.png') ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_grabbing_white__18.png') ;
 }
 .transport .carriergetfet_sleeping em {
-    border-left: 5px solid gray ;
-    background-image: url('//img.klml.de/devel/ptap/ptap_sleeping_trns__18.png') ;
+    background-image: url('//img.klml.de/devel/ptap/kohr_sleeping_white__18.png') ;
 }
 .transport .carriergetfet_carrying em {
-    border-left: 5px solid #B0BC28 ;
-    background-image: url('//img.klml.de/devel/ptap/ptap_carying__18.png') ;
+/*
+    background-image: url('//img.klml.de/devel/ptap/kohr_carrying_white__18.png') ;
+*/
+    background-image: url('//img.klml.de/devel/ptap/kohr_carrying_green__18.png') ;
 }
-
 
 .carriergetfet_sleeping,
 .carriergetfet_flooding {
@@ -248,39 +266,40 @@ ul.transportlist a  {
 
 
 .distance2target{
-    float: right;
-    background-color: #428bca;
-    color: #fff;
+    border-top: 1px solid #000;
     padding: 0 4px;
     margin: 0 0 2px 2px ;
+    width: 65px;
 }
-.coords {
- display: none;
+span.coords {
+    display: none;
 }
 
 .contentDescription  {
-    clear: both; 
     padding-top: 10px;
-    font-size: 1.2em;
 }
 
 .weight {
-    background: url('//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/PICOL_icon_Weight.svg/12px-PICOL_icon_Weight.svg.png') no-repeat 0px 0px #fff;
-    background-size: 12px ;
     padding-left: 15px;
     margin-left: 10px;
 }
 .size {
-    background: url('//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Simple_icon_table.svg/17px-Simple_icon_table.svg.png') no-repeat 0px 0px #fff;
-    background-size: 17px ;
-    padding-left: 20px;
+}
+
+.log {
+    background-color: #fff;
 }
 
 
-
-
 @media only screen and (max-width: 959px) {
-    #logo {
-        width: 70px;
+    #logo img {
+        width: 85px;
     }
+    #content  {
+        margin-top: 7em;
+    }
+    .holder span, .recipient span {
+        min-width: 5em;
+    }
+
 }

@@ -24,7 +24,7 @@
     <br />
 
     {% if transport.author.id == user.id or transport.recipient.id == user.id or user.is_superuser %}
-    <a href="{% url 'transport_edit' pk=transport.pk %}">edit this transport</a>
+    <a href="{% url 'transport_edit' pk=transport.pk %}" accesskey="e" >edit this transport</a>
     {% endif %}
 
     {% if transport.recipient.id == user.id %}
@@ -39,8 +39,8 @@
     {% endif %}
 
     <hr class="cb" />
-    <h3>log</h3>
     <div class="log">
+    <h3>log ▾</h3>
     <ul id="log">
     {% for transportPass in transportPasses %}
         <li >{{transportPass.newcurrentHolder }} at {{transportPass.location}} <em class="coords" >{{transportPass.locationLat}}, {{transportPass.locationLon}}</em></li>

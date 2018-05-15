@@ -11,38 +11,38 @@
 <body class="user_{{ user }}">
 
     <div id="header" class="cb">
-        <a href="/" ><img src="//img.klml.de/devel/gap_signet__100.png" id="logo" class="left" /></a>
+        <a href="/" id="logo" class="left" accesskey="1" ><img src="//img.klml.de/devel/ptap/kohr_supply_logo__200.png" /></a>
 
-    {% if user.is_authenticated %}
-        <span>
-            <span class="user getfet_{{ requestUserStatestate }}">{{ user }}&nbsp;is</span> 
-            <form method="POST" id="setuserstate" >
-                {% csrf_token %} 
-                {{userstateform.errors}}
-                {{userstateform.getfet}}
-                <button id="savetrs" type="submit" class="save btn btn-default">change</button>
-            </form>
-        </span>
-        <span>
-            {% load nbsp %}
-            in&nbsp;<a href="/location/{{ usersLocations.location.id }}" >{{ usersLocations.location.locationname | nbsp }}</a>
-        </span>
-
-    {% else %}
-
-
-        <p class="right"><a href="/about/mitmachen/">Howto join</a>? </a>Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
-    {% endif %}
-    </div>
-    <br class="cb" />
-    <div id="navigation">
+        <div id="personal">
         {% if user.is_authenticated %}
-        <a href="/transport/edit/" >new transport</a> |
+            <span class="right">
+                <span class="user getfet_{{ requestUserStatestate }}">{{ user }}&nbsp;is</span> 
+                <form method="POST" id="setuserstate" >
+                    {% csrf_token %} 
+                    {{userstateform.errors}}
+                    {{userstateform.getfet}}
+                    <button id="savetrs" type="submit" class="save btn btn-default">change</button>
+                </form>
+                {% load nbsp %}
+                in&nbsp;<a href="/location/{{ usersLocations.location.id }}" >{{ usersLocations.location.locationname | nbsp }}</a>
+            </span>
+
+        {% else %}
+            <a href="/about" class="about" title="kohr.supply is a p2p and relaying logistic platform" >p2p & relaying logistics</a>
+            <p class="right">Please <a href="{% url 'kohrsupply:login' %}" accesskey="l" >login</a> or <a href="{% url 'signup' %}">signup</a>.</p>
         {% endif %}
-        <a href="/locations" >all locations</a>
-        {% if user.is_authenticated %}
-        | <a href="/carrier/{{ user.id }}" >my</a> 
-        {% endif %}
+        </div>
+        <br class="cb" />
+        <div id="navigation">
+            {% if user.is_authenticated %}
+            <a href="/transport/edit/" accesskey="n" >new transport</a> |
+            {% endif %}
+            <a href="/locations" >all locations</a>
+            {% if user.is_authenticated %}
+            | <a href="/carrier/{{ user.id }}" >my</a> 
+            | <a href="/about" class="" title="kohr.supply is a p2p and relaying logistic platform">how to?</a>
+            {% endif %}
+        </div>
     </div>
 
     {% if messages %}
@@ -57,13 +57,13 @@
         {% block content %}{% endblock %}
     </div>
 
-<a href="/about">about</a> | 
+<a href="/about" class="about" >about</a> | 
 <a href="/transports?all=all">all transport</a>
 
     {% block login %}
         <p class="right">
         {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">logout</a>
+            <a href="{% url 'logout' %}" accesskey="l" >logout</a>
         {% else %}
             Please <a href="{% url 'kohrsupply:login' %}">login</a> or <a href="{% url 'signup' %}">signup</a>.
         {% endif %}
