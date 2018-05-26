@@ -25,19 +25,9 @@ Warum sollte kohr.supply funktionieren, es gibt doch viele andere [alternative L
 
 kohr.supply hätte Vorteilspotentiale:
 
-Effizienzsteigerung durch Bündelung
-: das wichtigste wäre das Lieferfahrten weniger parallel fahren und bei Lieferfahrten __Sendungen bündeln__.
-
-Zweitnutzung
-: jeder Verkehrsteilnehmer könnte sinnvolle Sendungen mitnehmen. Wie bei einer Mitfahrzentrale könnten Briefe, Pakete oder Paletten einfach mitgenommen werden.
-Wer eh einkaufen geht, kann für seinen Nachbarn ein Pakte mitbringen.
-Ein Handwerker der mit seiner Pritsche auf seine Baustelle fährt könnte für einen anderen Handwerker eine Palette Baustoffe mitbringen.
-Ein Paketbote, kann anstatt leer die Treppe runter zu laufen, meinen leeren Bierkasten mit nehmen.
-
-Private Zustellung
-: eine Idee für eine einfache Belieferung wäre wenn der Lieferbote, bei Nichtantreffen nicht wieder fährt, sondern per [smartlock](//www.golem.de/news/amazon-key-amazon-oeffnet-die-wohnungstuer-fuer-boten-1710-130812.html) in die Wohnung gehen darf.
-Das wäre das Maximum der Einfachheit, aber ein Armageddon der Sicherheit und Privatsphäre, denn wer vertraut darauf das amazon oder DHL __irgendeinem Boten__  meine Haustür aufschließt.
-Das ging besser wenn ich einem __vertrauten Boten__ aus der Nachbarschaft, einen klassischen Zweitschlüssel gebe, der aber per kohr.supply, Pakete von allen Logistikern an einem Übergabepunkt in Radelweite abholt.
+* Das wichtigste wäre, dass Lieferfahrer weniger parallel fahren und bei Lieferfahrten __Sendungen effizient bündeln__.
+* Jeder Verkehrsteilnehmer könnte __zusätzlich Sendungen__ mitnehmen. Wie bei einer Mitfahrzentrale könnten Briefe, Pakete oder Paletten einfach mitgenommen werden. Wer eh einkaufen geht, kann für seinen Nachbarn ein Pakte mitbringen. Ein Handwerker der mit seiner Pritsche auf seine Baustelle fährt, könnte für einen anderen Handwerker eine Palette Baustoffe mitbringen. Ein Paketbote, kann anstatt leer die Treppe runter zu laufen, meinen leeren Bierkasten mit nehmen.
+* Eine Idee für eine einfache Belieferung wäre wenn der Lieferbote, bei Nichtantreffen nicht wieder fährt, sondern per [smartlock](//www.golem.de/news/amazon-key-amazon-oeffnet-die-wohnungstuer-fuer-boten-1710-130812.html) die __private Wohnung betreten__ darf. Das wäre das Maximum der Einfachheit, aber ein Armageddon der Sicherheit und Privatsphäre. Denn wer vertraut darauf das amazon oder DHL irgendeinem Boten  meine Haustür aufschließt. Das ging besser wenn ich __einem vertrauten Boten__ aus der Nachbarschaft, einen klassischen Zweitschlüssel gebe, der aber per kohr.supply, Pakete von allen Logistikern an einem Übergabepunkt in Radelweite abholt.
 
 
 ## was
