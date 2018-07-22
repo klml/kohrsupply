@@ -61,51 +61,38 @@ function setmap() {
         iconAnchor:   [15, 15],
         iconSize:     [30, 30],
     });
-    var firstlog = true ;
+
+    $('.transport').each( function () {
+        var pointDescription = $(this).html() ;
+
+        var holderCoordinates       = $(this).find('.holder').find('.coords').text().split(',') ;
+        var recipientCoordinates    = $(this).find('.recipient').find('.coords').text().split(',') ;
+
+        var holderPoint     = new L.LatLng( holderCoordinates[0].trim() , holderCoordinates[1].trim() );
+        var recipientPoint  = new L.LatLng( recipientCoordinates[0].trim(), recipientCoordinates[1].trim() );
+
+        var holderMarker        = new L.marker( holderPoint, {icon: holderIcon }  ).addTo(map).bindPopup( pointDescription );
+        var recipientMarker     = new L.marker( recipientPoint, {icon: holderIcon }  ).addTo(map).bindPopup( pointDescription );
+
+        boundaries.push( holderMarker ) ;
+        boundaries.push( recipientMarker ) ;
 
 
-    $('.coords').each( function () {
-        var coordinates = $(this).text().split(',') ;
-        var pointDescription = $(this).parents('.transport, .location, .user').html() ;
-        var holderORrecipient = $(this).parents('div, h2').attr('class').split(' ')[0] ; // get the first class
-        marker = [ coordinates[0] , coordinates[1] ] ;
+        var pointDist2Target = new L.Polyline( [holderPoint , recipientPoint ] , {
+            color: '#77AE9A',
+            weight: 3,
+            opacity: 1,
+            smoothFactor: 1
+         }).addTo(map);
 
-        var point = new L.LatLng( coordinates[0] , coordinates[1] );
-
-        if ( holderORrecipient == 'recipient') {
-            newmarker = new L.marker( marker, {icon: recipientIcon } ).addTo(map).bindPopup( pointDescription );
-            pointDist2TargetList.push( point );
-
-            var pointDist2Target = new L.Polyline(pointDist2TargetList, {
-                color: '#77AE9A',
-                weight: 3,
-                opacity: 1,
-                smoothFactor: 1
-            }).addTo(map);
-
-            pointDist2TargetList = []; /* reset */
-
-        } else if ( holderORrecipient == 'holder')  {
-            newmarker = new L.marker( marker, {icon: holderIcon }  ).addTo(map).bindPopup( pointDescription );
-            pointDist2TargetList.push( point );
-        } else if ( holderORrecipient == 'locations')  {
-            newmarker = new L.marker( marker ).addTo(map).bindPopup( pointDescription );
-        } else if ( holderORrecipient == 'carriers')  {
-            newmarker = new L.marker( marker ).addTo(map).bindPopup( pointDescription );
-        } else { /* log points */
-            if ( firstlog ) {
-                newmarker = new L.marker( marker, { icon: logIcon } ).addTo(map);
-                firstlog = false;
-            } else {
-                newmarker = new L.marker( marker ); // add only to boundaries
-            };
+        // draw logline
+        $(this).find('#log').find('.coords').each( function () {
+            var logCoordinates = $(this).text().split(',') ;
+            var point = new L.LatLng( logCoordinates[0] , logCoordinates[1] );
             pointLogList.push( point )
-        };
+        });
 
-        boundaries.push( newmarker   ) ;
-
-
-        var logline = new L.Polyline(pointLogList, {
+        var logline = new L.Polyline( pointLogList , {
             color: '#CF763A',
             weight: 3,
             opacity: 1,
@@ -115,14 +102,14 @@ function setmap() {
         logline.addTo(map);
 
     });
-    
+
     $.each(userLocationsusers, function(index, value) {
         marker = [ value['lat'] , value['lon'] ] ;
 
         newmarker = new L.marker( marker, { icon: hubbingIcon } ).addTo(map).bindPopup( index );
     });
-    
-    
+
+
     var boundariesgroup = L.featureGroup( boundaries ); // only on transports
     map.fitBounds( boundariesgroup.getBounds() , { padding: [20, 20] });
 
