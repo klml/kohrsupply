@@ -85,6 +85,14 @@ function setmap() {
             smoothFactor: 1
          }).addTo(map);
 
+        // arrow on target
+        var arrowHead = L.polylineDecorator(pointDist2Target, {
+            patterns: [
+                {offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 25, polygon: false, headAngle: 40, pathOptions: {stroke: true }})}
+            ]
+        }).addTo(map);
+
+
         // draw logline
         $(this).find('#log').find('.coords').each( function () {
             var logCoordinates = $(this).text().split(',') ;
