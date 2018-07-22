@@ -140,7 +140,7 @@ ul.transportlist a  {
 }
 
 .content_nonfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/non_food_icon__50.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/nonfood_icon__50.png')  ;
 }
 .content_people .signet {
     background-image: url('//img.klml.de/devel/ptap/people_icon__50.png')  ;
@@ -149,13 +149,13 @@ ul.transportlist a  {
     background-image: url('//img.klml.de/devel/ptap/food_icon__50.png')  ;
 }
 .content_warmfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/warm_food_icon__50.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/warmfood_icon__50.png')  ;
 }
 .content_chilledfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/chilled_food_icon__50.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/chilledfood_icon__50.png')  ;
 }
 .content_deepfrozenfood .signet {
-    background-image: url('//img.klml.de/devel/ptap/frozen_food_icon__50.png')  ;
+    background-image: url('//img.klml.de/devel/ptap/frozenfood_icon__50.png')  ;
 }
 .content_laundry .signet {
     background-image: url('//img.klml.de/devel/ptap/laundry_icon__50.png')  ;
@@ -289,7 +289,6 @@ span.coords {
 .log {
     background-color: #fff;
 }
-
 
 @media only screen and (max-width: 959px) {
     #logo img {
