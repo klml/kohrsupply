@@ -46,11 +46,6 @@ function setmap() {
         iconAnchor:   [15, 50],
         iconSize:     [30, 50],
     });
-    var holderIcon = L.icon({
-        iconUrl: '//img.klml.de/devel/ptap/ptap_start__30.png',
-        iconAnchor:   [15, 50],
-        iconSize:     [30, 50],
-    });
     var logIcon = L.icon({
         iconUrl: '//img.klml.de/devel/ptap/ptap_start__10.png',
         iconAnchor:   [7, 25],
@@ -64,6 +59,7 @@ function setmap() {
 
     $('.transport').each( function () {
         var pointDescription = $(this).html() ;
+        var content = $(this).find('.content').text().trim() ;
 
         var holderCoordinates       = $(this).find('.holder').find('.coords').text().split(',') ;
         var recipientCoordinates    = $(this).find('.recipient').find('.coords').text().split(',') ;
@@ -71,7 +67,14 @@ function setmap() {
         var holderPoint     = new L.LatLng( holderCoordinates[0].trim() , holderCoordinates[1].trim() );
         var recipientPoint  = new L.LatLng( recipientCoordinates[0].trim(), recipientCoordinates[1].trim() );
 
-        var holderMarker        = new L.marker( holderPoint, {icon: holderIcon }  ).addTo(map).bindPopup( pointDescription );
+
+        var contentIcon = L.icon({
+            iconUrl: '//img.klml.de/devel/ptap/' + content + '_icon__30.png',
+            iconAnchor:   [15, 34],
+            iconSize:     [30, 32],
+        });
+
+        var holderMarker        = new L.marker( holderPoint, { icon: contentIcon }  ).addTo(map).bindPopup( pointDescription );
         var recipientMarker     = new L.marker( recipientPoint ) ;
 
         boundaries.push( holderMarker ) ;
