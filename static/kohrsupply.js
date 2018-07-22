@@ -72,7 +72,7 @@ function setmap() {
         var recipientPoint  = new L.LatLng( recipientCoordinates[0].trim(), recipientCoordinates[1].trim() );
 
         var holderMarker        = new L.marker( holderPoint, {icon: holderIcon }  ).addTo(map).bindPopup( pointDescription );
-        var recipientMarker     = new L.marker( recipientPoint, {icon: holderIcon }  ).addTo(map).bindPopup( pointDescription );
+        var recipientMarker     = new L.marker( recipientPoint ) ;
 
         boundaries.push( holderMarker ) ;
         boundaries.push( recipientMarker ) ;
