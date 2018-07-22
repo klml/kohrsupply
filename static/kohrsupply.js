@@ -41,21 +41,6 @@ function setmap() {
     var pointDist2TargetList = [];
     var pointLogList = [];
     var boundaries = [ ];
-    var recipientIcon = L.icon({
-        iconUrl: '//img.klml.de/devel/ptap/ptap_ziel__30.png',
-        iconAnchor:   [15, 50],
-        iconSize:     [30, 50],
-    });
-    var logIcon = L.icon({
-        iconUrl: '//img.klml.de/devel/ptap/ptap_start__10.png',
-        iconAnchor:   [7, 25],
-        iconSize:     [15, 25],
-    });
-    var hubbingIcon = L.icon({
-        iconUrl: '//img.klml.de/devel/ptap/ptap_hubbing_trns__30.png',
-        iconAnchor:   [15, 15],
-        iconSize:     [30, 30],
-    });
 
     $('.transport').each( function () {
         var pointDescription = $(this).html() ;
@@ -114,9 +99,15 @@ function setmap() {
 
     });
 
+
+    var hubbingIcon = L.icon({
+        iconUrl: '//img.klml.de/devel/ptap/ptap_hubbing_trns__30.png',
+        iconAnchor:   [15, 15],
+        iconSize:     [30, 30],
+    });
+
     $.each(userLocationsusers, function(index, value) {
         marker = [ value['lat'] , value['lon'] ] ;
-
         newmarker = new L.marker( marker, { icon: hubbingIcon } ).addTo(map).bindPopup( index );
     });
 
