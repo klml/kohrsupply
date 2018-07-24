@@ -111,6 +111,15 @@ function setmap() {
         newmarker = new L.marker( marker, { icon: hubbingIcon } ).addTo(map).bindPopup( index );
     });
 
+    // location detail page
+    $('.location').each( function () {
+        var locationCoordinates = $(this).find('.coords').text().split(',') ;
+        var locationPoint     = new L.LatLng( locationCoordinates[0].trim() , locationCoordinates[1].trim() );
+        newmarker = new L.marker( locationPoint, { icon: hubbingIcon } ).addTo(map) ;
+        boundaries.push( new L.marker( locationPoint ) );
+    });
+
+
 
     var boundariesgroup = L.featureGroup( boundaries ); // only on transports
     map.fitBounds( boundariesgroup.getBounds() , { padding: [20, 20] });

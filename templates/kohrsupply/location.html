@@ -28,10 +28,7 @@
     <br />
     {% load l10n %}
 
-    <span class="coords">
-    {{ location.geoLat | unlocalize }},
-    {{ location.geoLon | unlocalize }}
-    </span>
+    <span class="coords">{{ location.geoLat | unlocalize }}, {{ location.geoLon | unlocalize }}</span>
     
     <br />
     Created by {{ location.author }} at {{ location.lastused }}
