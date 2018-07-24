@@ -9,22 +9,20 @@
 <div class="locations">
 <ol>
 {% for transportloca in transportlocationlist %}
-    <li class="location"> 
+    <li class="location cb">
     
-    <a href="/location/{{ transportloca.id }}" title="edit">{{ transportloca.locationname }}</a>
-    {{ transportloca.street }}
 
     {% load l10n %}
-        <span class="coords">{{ transportloca.geoLat | unlocalize  }}, {{ transportloca.geoLon |  unlocalize }}</span>
-
-
     {% if user.is_authenticated %}
-        <form method="POST" id="closetransport" class="">
+        <form method="POST" id="closetransport" class="right">
             {% csrf_token %}
             <input name="checkin" value="{{ transportloca.id }}" type="hidden" />
-            <button id="savetrs" type="submit" class="save btn btn-default">checkin!</button>
+            <button id="savetrs" type="submit" class="save btn btn-default">checkin {{ transportloca.locationname }}</button>
         </form>
+        <span class="coords">{{ transportloca.geoLat | unlocalize  }}, {{ transportloca.geoLon |  unlocalize }}</span>
     {% endif %}
+    <a href="/location/{{ transportloca.id }}" title="edit">{{ transportloca.locationname }}</a>
+    {{ transportloca.street }}
 
      </li>
 {% endfor %}
