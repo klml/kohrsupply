@@ -62,7 +62,7 @@
 
     <h2>users are here</h2>
     {% for locationUserTransport in locationUserTransports  %}
-        {{ locationUserTransport.user }}
+        <a href="/carrier/{{ locationUserTransport.id }}/" >{{ locationUserTransport.user }}</a>
     {% endfor  %}
     
     <hr class="cb" />
