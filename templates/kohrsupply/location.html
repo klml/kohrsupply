@@ -44,26 +44,29 @@
     
     <h2>transport current</h2>
     {% for currentTransport in currentTransports  %}
+        <ul>
         {% for transport in currentTransport  %}
-
-    <br>
-        <a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})
+        <li><a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})</li>
         {% endfor  %}
+        </ul>
     {% endfor  %}
     
     
     <h2>transport to here</h2>
     {% for recipientTransport in recipientTransports  %}
+        <ul>
         {% for transport in recipientTransport  %}
-    <a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})
-    <br>
+            <li><a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})</li>
         {% endfor  %}
+        </ul>
     {% endfor  %}
 
     <h2>users are here</h2>
+    <ul>
     {% for locationUserTransport in locationUserTransports  %}
-        <a href="/carrier/{{ locationUserTransport.id }}/" >{{ locationUserTransport.user }}</a>
+       <li><a href="/carrier/{{ locationUserTransport.id }}/" >{{ locationUserTransport.user }}</a></li>
     {% endfor  %}
+    </ul>
     
     <hr class="cb" />
     {% if location.author.id == user.id %}
@@ -74,7 +77,6 @@
     </form>
     {% endif %}
 
-    <hr class="cb" />
 </div>
 
  <div id="mapid"></div>
