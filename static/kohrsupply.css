@@ -52,6 +52,21 @@ a.button {
     color: initial;
 }
 
+button {
+    background-color:#99cfb8;
+    border:1px solid #c2e2d4;
+    display:inline-block;
+    padding: 6px 15px;
+}
+button:hover {
+    background-color:#dde581;
+}
+button:active {
+    position:relative;
+    top:1px;
+}
+
+
 /* proportions and main style */
 #header {
     position: fixed;
