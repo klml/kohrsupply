@@ -290,6 +290,11 @@ span.coords {
     background-color: #fff;
 }
 
+.location button {
+    margin-right: 5px;
+}
+
+
 @media only screen and (max-width: 959px) {
     #logo img {
         width: 85px;

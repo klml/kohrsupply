@@ -14,15 +14,15 @@
 
     {% load l10n %}
     {% if user.is_authenticated %}
-        <form method="POST" id="closetransport" class="right">
+        <form method="POST" id="closetransport" class="left">
             {% csrf_token %}
             <input name="checkin" value="{{ transportloca.id }}" type="hidden" />
-            <button id="savetrs" type="submit" class="save btn btn-default">checkin {{ transportloca.locationname }}</button>
+            <button id="savetrs" type="submit" class="save btn btn-default">checkin</button>
         </form>
-        <span class="coords">{{ transportloca.geoLat | unlocalize  }}, {{ transportloca.geoLon |  unlocalize }}</span>
     {% endif %}
     <a href="/location/{{ transportloca.id }}" title="edit">{{ transportloca.locationname }}</a>
     {{ transportloca.street }}
+    <span class="coords">{{ transportloca.geoLat | unlocalize  }}, {{ transportloca.geoLon |  unlocalize }}</span>
 
      </li>
 {% endfor %}
