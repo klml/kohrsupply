@@ -80,7 +80,7 @@ def transport_list(request):
             else :
                 break
 
-    filterargsLocationUser.update ( pk__in= userGetfetusersusers  )
+    filterargsLocationUser.update ( user_id__in= userGetfetusersusers  )
     userLocationsusers = TransportUserLocation.objects.filter(  **filterargsLocationUser  )
 
     transports = Transport.objects.filter( **filterargsTransport ).order_by('-id').select_related()[:100]
