@@ -12,12 +12,17 @@
     Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
     <br />
 
-    {% if transport.currentHolder.id != user.id %}
+    {% if user.is_authenticated and transport.currentHolder.id != user.id %}
     <form method="POST" id="taketransport" class="">
         {% csrf_token %}
         <input name="transport" value="take" type="hidden" />
         <button id="savetrs" type="submit" class="save btn btn-default">I take this transport</button>
     </form>
+    {% elif user.is_authenticated %}
+
+    {% else %}
+    <p>Please <a href="{% url 'kohrsupply:login' %}" accesskey="l" >login</a> or <a href="{% url 'signup' %}">signup</a> to take this transport.</p>
+
     {% endif %}
 
     {% if transport.author.id == user.id or transport.recipient.id == user.id or user.is_superuser %}
