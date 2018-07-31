@@ -10,18 +10,15 @@
     #{{ transport.id }} | 
     Startpunkt: {{transport.origin }} bei {{ transport.sender }} um {{ transport.begin }} |
     Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
+    <br />
 
-    {% if transport.currentHolder.id == user.id %}
-    <div class="notice">YOU have this transport!</div>
-    {% else %}
+    {% if transport.currentHolder.id != user.id %}
     <form method="POST" id="taketransport" class="">
         {% csrf_token %}
         <input name="transport" value="take" type="hidden" />
         <button id="savetrs" type="submit" class="save btn btn-default">I take this transport</button>
     </form>
     {% endif %}
-
-    <br />
 
     {% if transport.author.id == user.id or transport.recipient.id == user.id or user.is_superuser %}
     <a href="{% url 'transport_edit' pk=transport.pk %}" accesskey="e" >edit this transport</a>

@@ -309,6 +309,11 @@ span.coords {
     margin-right: 5px;
 }
 
+.yours {
+    font-size: 1.2em;
+    color: gold;
+}
+
 
 @media only screen and (max-width: 959px) {
     #logo img {
