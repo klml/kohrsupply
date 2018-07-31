@@ -48,6 +48,7 @@ function setmap() {
 
         var holderCoordinates       = $(this).find('.holder').find('.coords').text().split(',') ;
         var recipientCoordinates    = $(this).find('.recipient').find('.coords').text().split(',') ;
+        var recipientGetFet    = $(this).find('.recipient').find('.carrier small').text() ;
 
         var holderPoint     = new L.LatLng( holderCoordinates[0].trim() , holderCoordinates[1].trim() );
         var recipientPoint  = new L.LatLng( recipientCoordinates[0].trim(), recipientCoordinates[1].trim() );
@@ -58,9 +59,14 @@ function setmap() {
             iconAnchor:   [15, 34],
             iconSize:     [30, 32],
         });
+        var recipientIcon = L.icon({
+            iconUrl: '//img.klml.de/devel/ptap/ptap_' + recipientGetFet + '_trns__30.png',
+        iconAnchor:   [15, 15],
+        iconSize:     [30, 30],
+        });
 
         var holderMarker        = new L.marker( holderPoint, { icon: contentIcon }  ).addTo(map).bindPopup( pointDescription );
-        var recipientMarker     = new L.marker( recipientPoint ) ;
+        var recipientMarker     = new L.marker( recipientPoint , { icon: recipientIcon }  ).addTo(map) ;
 
         boundaries.push( holderMarker ) ;
         boundaries.push( recipientMarker ) ;
@@ -100,6 +106,7 @@ function setmap() {
     });
 
 
+    // user willing to take transports
     var hubbingIcon = L.icon({
         iconUrl: '//img.klml.de/devel/ptap/ptap_hubbing_trns__30.png',
         iconAnchor:   [15, 15],
