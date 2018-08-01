@@ -12,8 +12,9 @@
     Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
     <br />
 
+    <hr class="cb" />
     {% if user.is_authenticated and transport.currentHolder.id != user.id %}
-    <form method="POST" id="taketransport" class="">
+    <form method="POST" id="taketransport" class="inline">
         {% csrf_token %}
         <input name="transport" value="take" type="hidden" />
         <button id="savetrs" type="submit" class="save btn btn-default">I take this transport</button>
@@ -22,22 +23,18 @@
 
     {% else %}
     <p>Please <a href="{% url 'kohrsupply:login' %}" accesskey="l" >login</a> or <a href="{% url 'signup' %}">signup</a> to take this transport.</p>
-
     {% endif %}
 
     {% if transport.author.id == user.id or transport.recipient.id == user.id or user.is_superuser %}
-    <a href="{% url 'transport_edit' pk=transport.pk %}" accesskey="e" >edit this transport</a>
+    <a href="{% url 'transport_edit' pk=transport.pk %}" accesskey="e" class="button inline">edit this transport</a>
     {% endif %}
 
     {% if transport.recipient.id == user.id %}
-    <hr class="cb" />
-
-        <form method="POST" id="closetransport" class="">
-            {% csrf_token %}
-            <input name="close" value="yes" type="hidden" />
-            <button id="savetrs" type="submit" class="save btn btn-default">close this transport</button>
-        </form>
-
+    <form method="POST" id="closetransport" class="inline">
+        {% csrf_token %}
+        <input name="close" value="yes" type="hidden" />
+        <button id="savetrs" type="submit" class="save btn btn-default">close this transport</button>
+    </form>
     {% endif %}
 
     <hr class="cb" />

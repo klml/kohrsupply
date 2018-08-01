@@ -44,26 +44,31 @@ a[href^="#"] { font-style: italic; } /* anchor links staying on the current page
 a[href^="http"] {text-decoration: underline;}
 a[href^="http"]:hover {text-decoration: none;}
 
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    color: initial;
-}
-
+a.button,
 button {
     background-color:#99cfb8;
     border:1px solid #c2e2d4;
     display:inline-block;
     padding: 6px 15px;
+    line-height: 1em;
+    color: rgb(76, 76, 76);
+    font-size: 0.9em;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
 }
+a.button:hover,
 button:hover {
     background-color:#dde581;
 }
+a.button:active,
 button:active {
     position:relative;
     top:1px;
+}
+.inline {
+    display: inline;
 }
 
 
