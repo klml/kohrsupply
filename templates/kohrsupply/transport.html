@@ -29,14 +29,15 @@
     <a href="{% url 'transport_edit' pk=transport.pk %}" accesskey="e" class="button inline">edit this transport</a>
     {% endif %}
 
-    {% if transport.recipient.id == user.id %}
+    {% if transport.recipient.id == user.id and transport.active %}
     <form method="POST" id="closetransport" class="inline">
         {% csrf_token %}
         <input name="close" value="yes" type="hidden" />
         <button id="savetrs" type="submit" class="save btn btn-default">close this transport</button>
     </form>
+    {% elif not transport.active %}
+        <span>This transport is closed</span>
     {% endif %}
-
     <hr class="cb" />
     <div class="log">
     <h3>log ▾</h3>
