@@ -26,7 +26,8 @@ class CreateTransport(forms.ModelForm):
 
     class Meta:
         model = Transport
-        fields = ('recipientname',  'contentDescription', 'contentClass', 'contentSize', 'contentWeight' )
+        fields = ['recipientname',  'contentDescription', 'contentClass', 'contentSize', 'contentWeight', 'holdername' ,'active' ]
+
 
 class UserState(forms.ModelForm):
     class Meta:
