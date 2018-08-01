@@ -4,7 +4,7 @@ Wie kann man bei [kohr.supply](/about/) __mitmachen__?
 Generell braucht man ein [Nutzerkonto](/signup).
 
 ## Lieferant
-![carrying](http://img.klml.de/devel/ptap/ptap_carying__80.png#right)
+![carrying](http://img.klml.de/devel/ptap/ptap_carrying__80.png#right)
 Wer Lieferungen ausliefern will:
 
 * stellt rechts oben seinen carrierestatus auf 'carrying'
