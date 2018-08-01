@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="transport singletransport getfet_{{ transport.getfet }} content_{{ transport.contentClass }}">
+<div class="transport active_{{transport.active | lower }} singletransport getfet_{{ transport.getfet }} content_{{ transport.contentClass }}">
 
     {% include "kohrsupply/transport_item.html" %}
 

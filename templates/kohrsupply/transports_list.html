@@ -1,6 +1,6 @@
 <ul class="transportlist">
 {% for transport in transports %}
-    <li id="{{ transport.id }}" class="transport getfet_{{ transport.getfet }} content_{{ transport.contentClass }}" >
+    <li id="{{ transport.id }}" class="transport active_{{ transport.active | lower }} getfet_{{ transport.getfet }} content_{{ transport.contentClass }}" >
         <a href="{% url 'transport' pk=transport.pk %}">
         {% include "kohrsupply/transport_item.html" %}
         </a>
