@@ -8,7 +8,7 @@ Generell braucht man ein [Nutzerkonto](/signup).
 Wer Lieferungen ausliefern will:
 
 * stellt rechts oben seinen carrierestatus auf 'carrying'
-* sucht auf der [Übersicht offener Tranporte](/) in <a href="#" class="getlocal">seiner Nähe</a>
+* sucht auf der [Übersicht offener Tranporte](/) in <a href="#" class="getlocal">seiner Nähe</a> oder [filtert passenden Transporte](#filter)
 * holt sich eine oder mehrere Lieferungen ab 
 * Übernimmt den Transport mit dem Button "I take this transport"
 * und sich sich jemand der sinnvoll in Richtung des Ziels liegt
@@ -47,5 +47,14 @@ Wer ganz klassische Lieferungen senden oder empfangen will, der:
     * und wartet auf einen Lieferanten.
     * 'closed' dann die Lieferung
 
-
 Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__ ![sleeping](http://img.klml.de/devel/ptap/ptap_sleeping__15.png).
+
+<h2 id="filter">Filtern</h2>
+
+Bisher gibt es folgende Filtermöglichkeiten:
+
+* [?class=nonfood](/?class=nonfood) schränkt auf Contentklassen (food, nonfood, people, etc) ein.
+* [?lat=48.1&lon=11.6&wide=6](/?lat=48.1&lon=11.6&wide=6) begrenzt den geographischen Suchbereich.
+
+Da gibt es noch viele gute Ideen, z.B. [Transport in eine bestimmte Richtung](//github.com/klml/kohrsupply/issues/8).
+Weitere Vorschläge gern auf [github.com issues](//github.com/klml/kohrsupply/issues).
