@@ -144,7 +144,8 @@ def transport(request, pk ):
 
     buildTransport( transport )
 
-    return render(request, 'kohrsupply/transport.html', {         'transport': transport, 'transportPasses' : transportPasses   })
+    # TODO userLocationsusers reduce to corridor
+    return render(request, 'kohrsupply/transport.html', { 'transport': transport, 'userLocationsusers' : usersWillingTakover ( ), 'transportPasses' : transportPasses   })
 
 
 @login_required
