@@ -273,17 +273,8 @@ ul.transportlist a  {
     background-image: url('//img.klml.de/devel/ptap/kohr_sleeping_white__18.png') ;
 }
 .transport .carriergetfet_carrying em {
-/*
-    background-image: url('//img.klml.de/devel/ptap/kohr_carrying_white__18.png') ;
-*/
     background-image: url('//img.klml.de/devel/ptap/kohr_carrying_green__18.png') ;
 }
-
-.carriergetfet_sleeping,
-.carriergetfet_flooding {
-    background-color: #e5e5e5; 
-}
-
 
 .distance2target{
     border-top: 1px solid #000;
