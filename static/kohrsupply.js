@@ -129,7 +129,7 @@ function setmap() {
 
 
     var boundariesgroup = L.featureGroup( boundaries ); // only on transports
-    map.fitBounds( boundariesgroup.getBounds() , { padding: [20, 20] });
+    map.fitBounds( boundariesgroup.getBounds() , { padding: [27, 27] });
 
     if ( typeof geosearch != "undefined" ) {
           //~ TODO geosearch.wide faktor

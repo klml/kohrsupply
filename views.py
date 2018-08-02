@@ -31,6 +31,8 @@ from .forms import CreateTransport , TransportUserLocationEdit
 
 ###################
 
+filterargsLocationUser = { }
+
 def transport_list(request):
 
     class geosearch(object):
@@ -38,7 +40,6 @@ def transport_list(request):
     userLocationsusers = latrange = lonrange = ''
     listuserLocationsusers = []
     filterargsTransport = { 'active' : True } 
-    filterargsLocationUser = { }
 
 
     # /?class=nonfood
@@ -46,16 +47,11 @@ def transport_list(request):
         classes = request.GET['class']
         filterargsTransport.update ( { 'contentClass' : classes } )
 
-    # get users with getfet: hubbing, flooding (to hide carrying, sleeping and grabbing) 
-    userGetfetusers = TransportUserGetFet.objects.filter( Q(getfet = 'hubbing' ) | Q(getfet = 'flooding' ) )
-    userGetfetusersusers = list( userGetfetusers.values_list('user',  flat=True ) )
-
-    filterargsTransport.update ( { 'currentHolder__in' : userGetfetusersusers } )
+    filterargsTransport.update ( { 'currentHolder__in' : usersGetFetActive() } )
 
     # reset all filters
     if request.GET.get('all')  :
         filterargsTransport = { }
-
 
 
     # /?lat=48.1&lon=11.6&wide=6
@@ -80,14 +76,27 @@ def transport_list(request):
             else :
                 break
 
-    filterargsLocationUser.update ( user_id__in= userGetfetusersusers  )
-    userLocationsusers = TransportUserLocation.objects.filter(  **filterargsLocationUser  )
-
     transports = Transport.objects.filter( **filterargsTransport ).order_by('-id').select_related()[:100]
 
     buildTransports( transports )
 
-    return render(request, 'kohrsupply/transports.html',  { 'transports': transports , 'userLocationsusers' : userLocationsusers , 'geosearch' : geosearch  })
+    return render(request, 'kohrsupply/transports.html',  { 'transports': transports , 'userLocationsusers' : usersWillingTakover ( ) , 'geosearch' : geosearch  })
+
+
+def usersGetFetActive ( ) :
+    # get users with getfet: hubbing, flooding (to hide carrying, sleeping and grabbing)
+    userGetfetusers = TransportUserGetFet.objects.filter( Q(getfet = 'hubbing' ) | Q(getfet = 'flooding' ) )
+    userGetfetusersusers = list( userGetfetusers.values_list('user',  flat=True ) )
+
+    return userGetfetusersusers
+
+
+def usersWillingTakover (  ) :
+
+    filterargsLocationUser.update ( user_id__in= usersGetFetActive()  )
+    userLocationsusers = TransportUserLocation.objects.filter(  **filterargsLocationUser  )
+
+    return userLocationsusers
 
 
 def latlonrange( lat, lon, wide, geosearch, filterargsTransport, filterargsLocationUser ):
