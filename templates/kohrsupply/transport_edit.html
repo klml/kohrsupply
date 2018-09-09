@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Edit Transport</h1>
-    <form method="POST" class="post-form transport_{{transportid}}">{% csrf_token %}
+    <form id="transportedit" method="POST" class="post-form transport_{{transportid}}">{% csrf_token %}
         {{ form.as_p }}
         <button id="savetrs" type="submit" class="save btn btn-default" accesskey="s" >Save</button>
     </form>

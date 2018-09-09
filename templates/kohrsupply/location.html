@@ -62,7 +62,7 @@
     </ul>
     
     {% if location.author.id == user.id %}
-    <form method="POST" class="right">
+    <form id="locationdelete" method="POST" class="right">
         {% csrf_token %}
         <input name="delete" type="hidden" value="yes" />
         <button>delete</button>
