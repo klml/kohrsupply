@@ -4,7 +4,50 @@
 
 <div class="transport active_{{transport.active | lower }} singletransport getfet_{{ transport.getfet }} content_{{ transport.contentClass }}">
 
-    {% include "kohrsupply/transport_item.html" %}
+    <div class="contentDescription">
+    <div id="qrcodeurl" class="right" ></div>
+
+
+    <div class="signetdistance">
+        <div class="content signet">
+        {% if  transport.active %}
+            {{ transport.contentClass }}
+        {% else %}
+            closed
+        {% endif %}
+        </div>
+        <div class="distance2target" title="aktueller Abstand zum Ziel">
+            {{ transport.distance2target }} km
+        </div>
+    </div>
+
+    <h2 class="holder carriergetfet_{{ transport.getfet }}" title="This transport is at">
+    {% load l10n %}
+    <span>{{ transport.currentLocation.locationname }}</span>
+
+    <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa }})
+    {% if transport.currentHolder.id == user.id %}
+    <span class="yours" title="You have this transport">★</span>
+    {% endif %}
+    </em>
+    <span class="coords">{{ transport.currentLocation.geoLat | unlocalize }}, {{ transport.currentLocation.geoLon | unlocalize }}</span>
+    </h2>
+
+    <h2 class="recipient carriergetfet_{{ transport.recipientgetfet }}" title="This transport should get to">
+    <span>{{ transport.recipientLocation.locationname }}</span>
+    <em class="carrier" title="recipient is {{ transport.recipient }}, is currently {{ transport.recipientgetfet }} and has got {{ transport.recipientPoints.summa  }} points"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
+
+
+    <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
+    </h2>
+
+    {{ transport.contentDescription }}
+    </div>
+
+    <span class="size" title="Größe">{{ transport.contentSize }}</span>
+    <span class="weight" title="Gewicht">{{ transport.contentWeight }}</span>
+
+
 
     <br />
     #{{ transport.id }} | 
