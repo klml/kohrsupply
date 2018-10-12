@@ -35,7 +35,7 @@
     <a href="{% url 'location_edit' pk=location.pk %}" class="right">edit this location</a>
     {% endif %}
     
-    <h2>transport current</h2>
+    <h2>these transports are here right now</h2>
     {% for currentTransport in currentTransports  %}
         <ul class="signetlist">
         {% for transport in currentTransport  %}
@@ -54,7 +54,7 @@
         </ul>
     {% endfor  %}
 
-    <h2>users are here</h2>
+    <h2>these people are here right now</h2>
     <ul>
     {% for locationUserTransport in locationUserTransports  %}
        <li><a href="/carrier/{{ locationUserTransport.id }}/" >{{ locationUserTransport.user }}</a></li>
