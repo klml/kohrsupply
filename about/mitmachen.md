@@ -4,7 +4,7 @@ Wie kann man bei [kohr.supply](/about/) __mitmachen__?
 Generell braucht man ein [Nutzerkonto](/signup).
 
 ## Lieferant
-![carrying](http://img.klml.de/devel/ptap/ptap_carrying__80.png#right)
+![carrying](//img.klml.de/devel/ptap/ptap_carrying__80.png#right)
 Wer Lieferungen ausliefern will:
 
 * stellt rechts oben seinen carrierestatus auf 'carrying'
@@ -17,7 +17,7 @@ Wer Lieferungen ausliefern will:
 Darauf auchten das der (Zwischen)-Empfänger auch die Lieferung übernimmt.
 
 ## Hubbing
-![hubbing](http://img.klml.de/devel/ptap/ptap_hubbing__80.png#right)
+![hubbing](//img.klml.de/devel/ptap/ptap_hubbing__80.png#right)
 
 Wer Lieferungen bei sich umschlagen will:
 
@@ -34,8 +34,8 @@ Darauf auchten das der neue Lieferant auch die Lieferung übernimmt.
 Wer als Hubber seine aktuellen LIeferungen los werden will, stellt auf 'flodding'.
 
 ## Nur Senden oder Empfangen
-![flooding](http://img.klml.de/devel/ptap/ptap_flooding__80.png#right)
-![grabbing](http://img.klml.de/devel/ptap/ptap_grabbing__80.png#right)
+![flooding](//img.klml.de/devel/ptap/ptap_flooding__80.png#right)
+![grabbing](//img.klml.de/devel/ptap/ptap_grabbing__80.png#right)
 
 Wer ganz klassische Lieferungen senden oder empfangen will, der:
 
@@ -47,7 +47,7 @@ Wer ganz klassische Lieferungen senden oder empfangen will, der:
     * und wartet auf einen Lieferanten.
     * 'closed' dann die Lieferung
 
-Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__ ![sleeping](http://img.klml.de/devel/ptap/ptap_sleeping__15.png).
+Wer gar nicht mehr teilnehemen will stellt sich auf __sleeping__ ![sleeping](//img.klml.de/devel/ptap/ptap_sleeping__15.png).
 
 <h2 id="filter">Filtern</h2>
 
