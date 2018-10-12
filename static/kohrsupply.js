@@ -186,9 +186,8 @@ jQuery(document).ready(function() {
         getLocation();
     });
 
-    if (  $('.singletransport').length ) {
-        setqrcode();
-    };
+    setqrcode();
+
     getlocal();
     setmap();
 
