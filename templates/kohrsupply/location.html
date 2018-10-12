@@ -37,9 +37,9 @@
     
     <h2>transport current</h2>
     {% for currentTransport in currentTransports  %}
-        <ul>
+        <ul class="signetlist">
         {% for transport in currentTransport  %}
-        <li><a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})</li>
+        <li class="content_{{ transport.contentClass }}"><a href="/transport/{{ transport.id }}">{{ transport.contentDescription }} - {{ transport.currentHolder }} to  {{ transport.recipient }}</a></li>
         {% endfor  %}
         </ul>
     {% endfor  %}
@@ -47,9 +47,9 @@
     
     <h2>transport to here</h2>
     {% for recipientTransport in recipientTransports  %}
-        <ul>
+        <ul class="signetlist">
         {% for transport in recipientTransport  %}
-            <li><a href="/transport/{{ transport.id }}"> {{ transport.currentHolder }} to  {{ transport.recipient }} ({{ transport.contentClass }})</a> ({{ transport.id }})</li>
+            <li class="content_{{ transport.contentClass }}"><a href="/transport/{{ transport.id }}">{{ transport.contentDescription }} - {{ transport.currentHolder }} to  {{ transport.recipient }}</a></li>
         {% endfor  %}
         </ul>
     {% endfor  %}
