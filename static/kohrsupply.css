@@ -171,35 +171,35 @@ ul.signetlist li {
     line-height: 35px;
 }
 
-li.content_nonfood,
+ul.signetlist li.content_nonfood,
 .content_nonfood .signet {
     background-image: url('//img.klml.de/devel/ptap/nonfood_icon__50.png')  ;
 }
-li.content_people,
+ul.signetlist li.content_people,
 .content_people .signet {
     background-image: url('//img.klml.de/devel/ptap/people_icon__50.png')  ;
 }
-li.content_food,
+ul.signetlist li.content_food,
 .content_food .signet {
     background-image: url('//img.klml.de/devel/ptap/food_icon__50.png')  ;
 }
-li.content_warmfood,
+ul.signetlist li.content_warmfood,
 .content_warmfood .signet {
     background-image: url('//img.klml.de/devel/ptap/warmfood_icon__50.png')  ;
 }
-li.content_chilledfood,
+ul.signetlist li.content_chilledfood,
 .content_chilledfood .signet {
     background-image: url('//img.klml.de/devel/ptap/chilledfood_icon__50.png')  ;
 }
-li.content_deepfrozenfood,
+ul.signetlist li.content_deepfrozenfood,
 .content_deepfrozenfood .signet {
     background-image: url('//img.klml.de/devel/ptap/frozenfood_icon__50.png')  ;
 }
-li.content_laundry,
+ul.signetlist li.content_laundry,
 .content_laundry .signet {
     background-image: url('//img.klml.de/devel/ptap/laundry_icon__50.png')  ;
 }
-li.content_garbage,
+ul.signetlist li.content_garbage,
 .content_garbage .signet {
     background-image: url('//img.klml.de/devel/ptap/garbage_icon__50.png')  ;
 }
