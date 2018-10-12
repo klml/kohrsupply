@@ -23,7 +23,7 @@
 
     <h2 class="holder carriergetfet_{{ transport.getfet }}" title="This transport is at">
     {% load l10n %}
-    <span>{{ transport.currentLocation.locationname }}</span>
+    <span><a href="/location/{{ transport.currentLocation.id }}/">{{ transport.currentLocation.locationname }}</a></span>
 
     <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa }})
     {% if transport.currentHolder.id == user.id %}
@@ -34,7 +34,7 @@
     </h2>
 
     <h2 class="recipient carriergetfet_{{ transport.recipientgetfet }}" title="This transport should get to">
-    <span>{{ transport.recipientLocation.locationname }}</span>
+    <span><a href="/location/{{ transport.recipientLocation.id }}/">{{ transport.recipientLocation.locationname }}</a></span>
     <em class="carrier" title="recipient is {{ transport.recipient }}, is currently {{ transport.recipientgetfet }} and has got {{ transport.recipientPoints.summa  }} points"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
 
 
