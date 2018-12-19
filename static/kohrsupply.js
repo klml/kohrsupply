@@ -141,15 +141,18 @@ function setmap() {
 
 function setqrcode() {
     urlwithoutsearch = window.location.origin + window.location.pathname ;
+    qrcodeurl = document.getElementById("qrcodeurl");
 
-    var qrcode = new QRCode(document.getElementById("qrcodeurl"), {
-        text: urlwithoutsearch ,
-        width: 128,
-        height: 128,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-    });
+    if ( qrcodeurl ) {
+        var qrcode = new QRCode( qrcodeurl , {
+            text: urlwithoutsearch ,
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    }
 };
 
 
