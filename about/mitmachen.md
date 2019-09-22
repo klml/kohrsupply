@@ -12,9 +12,7 @@ Wer Lieferungen ausliefern will:
 * holt sich eine oder mehrere Lieferungen ab 
 * Übernimmt den Transport mit dem Button "I take this transport"
 * sucht sich einen **Hub** der sinnvoll in Richtung des Ziels liegt
-* und übergibt dort die Sendung
-
-Darauf auchten das der (Zwischen)-Empfänger auch die Lieferung übernimmt.
+* und übergibt dort die Sendung und achtet darauf das der (Zwischen)-Empfänger die Lieferung auch übernimmt.
 
 ## Hubbing
 ![hubbing](//img.klml.de/devel/ptap/ptap_hubbing__80.png#right)
