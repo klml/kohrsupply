@@ -11,7 +11,7 @@ Wer Lieferungen ausliefern will:
 * sucht auf der [Übersicht offener Tranporte](/) in <a href="#" class="getlocal">seiner Nähe</a> oder [filtert passenden Transporte](#filter)
 * holt sich eine oder mehrere Lieferungen ab 
 * Übernimmt den Transport mit dem Button "I take this transport"
-* und sich sich jemand der sinnvoll in Richtung des Ziels liegt
+* sucht sich einen **Hub** der sinnvoll in Richtung des Ziels liegt
 * und übergibt dort die Sendung
 
 Darauf auchten das der (Zwischen)-Empfänger auch die Lieferung übernimmt.
@@ -21,17 +21,15 @@ Darauf auchten das der (Zwischen)-Empfänger auch die Lieferung übernimmt.
 
 Wer Lieferungen bei sich umschlagen will:
 
-* stellt rechts oben seinen carrierestatus auf 'hubbing'
+* stellt seinen carrierestatus auf 'hubbing'
 * checkt in seiner aktuellen [location](/locations) ein 
 * wartet auf Lieferanten die Lieferungen bringen
 * Übernimmt den Transport mit dem Button "I take this transport"
-* wartet auf Lieferanten die Lieferungen abholen
-* und übergibt dort die Sendung
-
-Darauf auchten das der neue Lieferant auch die Lieferung übernimmt.
+* wartet auf andere Lieferanten die Lieferungen abholen
+* und übergibt diesem die Sendung und achtet darauf dass der neue Lieferant auch die Lieferung übernommen hat.
 
 
-Wer als Hubber seine aktuellen LIeferungen los werden will, stellt auf 'flodding'.
+Wer als Hubber seine aktuellen Lieferungen los werden will, stellt seinen Status auf 'flodding'.
 
 ## Nur Senden oder Empfangen
 ![flooding](//img.klml.de/devel/ptap/ptap_flooding__80.png#right)
@@ -39,11 +37,11 @@ Wer als Hubber seine aktuellen LIeferungen los werden will, stellt auf 'flodding
 
 Wer ganz klassische Lieferungen senden oder empfangen will, der:
 
-* checkt in seiner aktuellen [location](/locations) ein 
-* Sender stellt rechts oben seinen carrierestatus auf 'flooding'
+* checkt in seiner aktuellen [location](/locations) ein
+* ein __Sender__ stellt seinen carrierestatus auf 'flooding'
     * erstellt einen neue [Lieferung](/transport/edit/)
     * und wartet auf einen Lieferanten.
-* Empfänger stellt rechts oben seinen carrierestatus auf 'grabbing' 
+* ein __Empfänger__ stellt seinen carrierestatus auf 'grabbing' 
     * und wartet auf einen Lieferanten.
     * 'closed' dann die Lieferung
 
