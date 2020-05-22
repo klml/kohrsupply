@@ -13,7 +13,10 @@ Demo: [kohr.supply](http://kohr.supply/)
 
 [download](https://github.com/klml/kohrsupply/archive/master.zip) or checkout 
 
-    mv settings.example.py settings.py
+```bash
+pip install -r requirements.txt
+mv settings.example.py settings.py
+```
 
 [Prepare this](https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/) and change in 'settings.py':
 
@@ -23,5 +26,5 @@ Demo: [kohr.supply](http://kohr.supply/)
 * ad SITE_ID
 * set STATIC_ROOT to the path for webassets (css, js) (STATIC_URL must stay '/static/')
 
-install (with pip) 
-* [django-markdowny](https://pypi.python.org/pypi/django-markdown)
+
+
