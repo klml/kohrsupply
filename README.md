@@ -28,3 +28,14 @@ mv settings.example.py settings.py
 
 
 
+### test database
+
+[CREATE SQLite Database](https://www.tutorialspoint.com/sqlite/sqlite_create_database.htm)
+```bash
+python manage.py migrate
+```
+
+use example db
+```bash
+sqlite3 db.sqlite3 < kohrsupply/example/db.sql
+```
