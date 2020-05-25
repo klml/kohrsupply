@@ -8,7 +8,7 @@ from django.utils import timezone
 
 
 class TransportLocation(models.Model):
-    author = models.ForeignKey( User, related_name="authorlocation")
+    author = models.ForeignKey( User, related_name="authorlocation", on_delete=models.CASCADE)
     name = models.CharField(max_length=50 , default='thisloco')
 
     locationname = models.CharField( max_length=100, null=False)
@@ -28,13 +28,13 @@ class Transport(models.Model):
     active = models.BooleanField(default=1)
 
     # person starts transport
-    author = models.ForeignKey(User, related_name="writer", null=True)
+    author = models.ForeignKey(User, related_name="writer", null=True, on_delete=models.CASCADE)
 
     # person having the transport in its hands
-    currentHolder = models.ForeignKey(User, related_name="holder", null=True)            ## FK
+    currentHolder = models.ForeignKey(User, related_name="holder", null=True, on_delete=models.CASCADE)            ## FK
 
     # recipient is the person who closes the transport, 
-    recipient   = models.ForeignKey(User, null=True)
+    recipient   = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 
     # times of your live
     begin           = models.DateTimeField(auto_now_add=True)
@@ -52,11 +52,11 @@ class Transport(models.Model):
 
 class TransportPass(models.Model):
 
-    transport   = models.ForeignKey( Transport )
+    transport   = models.ForeignKey( Transport , on_delete=models.CASCADE)
     touched     = models.DateTimeField(auto_now_add=True)
 
     # person having the transport in its hands and where this person was 
-    newcurrentHolder = models.ForeignKey(User, related_name="newholder", null=True)
+    newcurrentHolder = models.ForeignKey(User, related_name="newholder", null=True, on_delete=models.CASCADE)
     points        = models.PositiveSmallIntegerField(null=True, default=1)
 
 
@@ -68,7 +68,7 @@ class TransportPass(models.Model):
 class TransportUserLocation(models.Model):
     # a person can only be at one place, but many persons at one place
     user     = models.OneToOneField(User, on_delete=models.CASCADE)
-    location =  models.ForeignKey(TransportLocation )
+    location =  models.ForeignKey(TransportLocation , on_delete=models.CASCADE)
     
     changed =   models.DateTimeField(auto_now_add=True)
 
