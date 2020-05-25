@@ -66,7 +66,6 @@ INSERT INTO kohrsupply_transportusergetfet VALUES(3,'hubbing','2017-06-15 16:07:
 INSERT INTO kohrsupply_transportusergetfet VALUES(4,'hubbing','2018-07-31 21:27:35.150337',4);
 INSERT INTO kohrsupply_transportusergetfet VALUES(5,'grabbing','2017-10-16 18:54:26.776600',5);
 INSERT INTO kohrsupply_transportusergetfet VALUES(6,'hubbing','2017-07-18 13:57:50.536574',6);
-INSERT INTO kohrsupply_transportusergetfet VALUES(7,'hubbing','2017-07-18 14:09:26.721937',7);
 INSERT INTO kohrsupply_transportusergetfet VALUES(8,'hubbing','2017-07-21 20:25:17.557257',9);
 INSERT INTO kohrsupply_transportusergetfet VALUES(9,'hubbing','2017-07-23 09:18:45.817015',8);
 INSERT INTO kohrsupply_transportusergetfet VALUES(10,'carrying','2018-07-24 18:16:01.813676',12);
