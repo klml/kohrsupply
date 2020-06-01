@@ -65,7 +65,7 @@
     {% elif user.is_authenticated %}
 
     {% else %}
-    <p>Please <a href="{% url 'kohrsupply:login' %}" accesskey="l" >login</a> or <a href="{% url 'signup' %}">signup</a> to take this transport.</p>
+    <p>Please <a href="{% url 'login' %}" accesskey="l" >login</a> or <a href="{% url 'signup' %}">signup</a> to take this transport.</p>
     {% endif %}
 
     {% if transport.author.id == user.id or transport.recipient.id == user.id or user.is_superuser %}

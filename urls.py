@@ -36,7 +36,7 @@ urlpatterns = [
 
     url(r'^transport/edit/(?P<pk>\d+)/$', views.transport_edit, name='transport_edit'),
 
-    url('^', include('django.contrib.auth.urls', namespace="kohrsupply")),
+    url('^', include('django.contrib.auth.urls')),
     url(r'^signup$', views.signup, name='signup'),
     url(r'^logout$', views.logout, name='logout' ),
     url(r'^password_reset$', views.password_reset, name='password_reset'),

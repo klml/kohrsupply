@@ -6,16 +6,14 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.db.models import Q
 from django.db.models import Sum
 
-from django.shortcuts import render_to_response, render, redirect
+from django.shortcuts import render, redirect
 from django.core import serializers
-from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.models import Permission, User
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.views import password_reset
 
 
 
