@@ -16,7 +16,6 @@ Including another URLconf
 
 from django.conf.urls import url, include
 
-from . import views
 
 from django.contrib import admin
 from django.views.generic import RedirectView
@@ -25,38 +24,48 @@ from django.conf.urls.static import static
 
 
 
+
+from django.urls import path, re_path
+from . import views
+
+
 app_name = 'kohrsupply'
 urlpatterns = [
 
-    url(r'^$', views.transport_list, name='transport_list'),
-    url(r'^accounts/profile/$', RedirectView.as_view(url='/')), ## Workaround to get to start after login
+    path('', views.transport_list, name='transport_list'),
 
-    url(r'^transport/(?P<pk>\d+)/$', views.transport, name='transport'),
-    url(r'^transport/edit/$', views.transport_edit, name='transport_new'),
+    re_path(r'^accounts/profile/$', RedirectView.as_view(url='/')), ## Workaround to get to start after login
 
-    url(r'^transport/edit/(?P<pk>\d+)/$', views.transport_edit, name='transport_edit'),
+    re_path('^transport/(?P<pk>\d+)/$', views.transport, name='transport'),
 
-    url('^', include('django.contrib.auth.urls')),
-    url(r'^signup$', views.signup, name='signup'),
-    url(r'^logout$', views.logout, name='logout' ),
-    url(r'^password_reset$', views.password_reset, name='password_reset'),
-    url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.password_reset, name='password_reset_confirm'),
-    url(r'^password_reset/done/$', views.password_reset, name='password_reset_done'),
-    url(r'^password_reset/complete/$', views.password_reset, name='password_reset_complete'),
+    re_path(r'^transport/edit/$', views.transport_edit, name='transport_new'),
 
+    re_path(r'^transport/edit/(?P<pk>\d+)/$', views.transport_edit, name='transport_edit'),
 
-    url(r'^location/(?P<pk>\d+)/$', views.location, name='location'),
-    url(r'^location/$', views.location_edit, name='location_edit'),
-    url(r'^location/edit/(?P<pk>\d+)/$', views.location_edit, name='location_edit'),
-    url(r'^locations$', views.locations, name='locations'),
-
-    url(r'^carriers/$', views.carriers, name='carriers'),
-    url(r'^carrier/(?P<pk>\d+)/$', views.carrier, name='carrier'),
+    path('^', include('django.contrib.auth.urls')),
+    re_path(r'^signup$', views.signup, name='signup'),
+    re_path(r'^logout$', views.logout, name='logout' ),
+    re_path(r'^password_reset$', views.password_reset, name='password_reset'),
+    re_path(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.password_reset, name='password_reset_confirm'),
+    re_path(r'^password_reset/done/$', views.password_reset, name='password_reset_done'),
+    re_path(r'^password_reset/complete/$', views.password_reset, name='password_reset_complete'),
 
 
-    url(r'^about/$', views.about, name='about'),
-    url(r'^about/(?P<pk>[0-9A-Za-z]+)/$', views.about, name='about'),
+    re_path(r'^location/(?P<pk>\d+)/$', views.location, name='location'),
+    re_path(r'^location/$', views.location_edit, name='location_edit'),
+    re_path(r'^location/edit/(?P<pk>\d+)/$', views.location_edit, name='location_edit'),
+    path('locations', views.locations, name='locations'),
 
-    url(r'^admin/', admin.site.urls),
+    re_path(r'^carriers/$', views.carriers, name='carriers'),
+    re_path(r'^carrier/(?P<pk>\d+)/$', views.carrier, name='carrier'),
+
+
+    re_path(r'^about/$', views.about, name='about'),
+    re_path(r'^about/(?P<pk>[0-9A-Za-z]+)/$', views.about, name='about'),
+
+
+
+
+    re_path(r'^admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 #~ ] + static('/static/', document_root='/home/kohr/kohrsupply/kohrsupply/static/')
