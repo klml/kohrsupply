@@ -14,7 +14,7 @@ Demo: [kohr.supply](http://kohr.supply/)
 [download](https://github.com/klml/kohrsupply/archive/master.zip) or checkout 
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 mv settings.example.py settings.py
 ```
 
