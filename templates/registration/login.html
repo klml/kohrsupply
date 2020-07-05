@@ -10,13 +10,13 @@
     {% if user.is_authenticated %}
     <p>Your account doesn't have access to this page. To proceed,
     please login with an account that has access.</p>
-    <p><a href="{% url 'nl:logout' %}">logout?</a></p>
+    <p><a href="{% url 'logout' %}">logout?</a></p>
     {% else %}
     <p>Please login to see this page.</p>
     {% endif %}
 {% endif %}
 
-<form method="post" action="{% url 'kohrsupply:login' %}">
+<form method="post" action="{% url 'login' %}">
 {% csrf_token %}
 <table>
 <tr>
@@ -35,7 +35,7 @@
 
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'kohrsupply:password_reset' %}">Lost password?</a></p>
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 
 <hr />

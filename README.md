@@ -32,7 +32,7 @@ mv settings.example.py settings.py
 
 [CREATE SQLite Database](https://www.tutorialspoint.com/sqlite/sqlite_create_database.htm)
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 use example db

@@ -393,6 +393,6 @@ def password_reset(request):
 
 def about(request, pk='index'):
     mdfile = 'kohrsupply/about/' + pk + '.md'
-    contentmd = open( mdfile ).read(10000).decode("utf-8")
+    contentmd = open( mdfile ).read(10000)
     content = markdown.markdown( contentmd ) 
     return render(request,'kohrsupply/about.html', { 'content': content , })
