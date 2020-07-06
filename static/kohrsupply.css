@@ -8,7 +8,7 @@
 
 */
 body{
-    font:normal 18px Arial, Helvetica;
+    font:normal 14px Arial, Helvetica;
     margin:10px auto;
     max-width:950px;
     line-height:1.6;
@@ -20,7 +20,7 @@ h1,h2,h3{line-height:1.2}
 h1,h2,h3,h4,h5,h6{padding:0; margin:3px 0 0 0;}
 h1{color:#000; font-size: 120%; }
 h2{color:#000; font-size: 110%; }
-h3{color:#000; font-size: 106%; }
+h3{color:#000; font-size: 140%; }
 h4{color:#000; font-size: 104%; }
 h5{color:#000; font-size: 102%; }
 h6{color:#000; font-size: 101%; }
@@ -91,7 +91,7 @@ button:active {
 }
 
 #content  {
-    margin-top: 7em;
+    margin-top: 8em;
 }
 #content form label {
   display:inline-block;
