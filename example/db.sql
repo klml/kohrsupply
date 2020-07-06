@@ -18,7 +18,7 @@ INSERT INTO auth_user VALUES(18,'pbkdf2_sha256$36000$LCKONfZROuvd$tj2Oxv+s1Psfp1
 INSERT INTO kohrsupply_transport VALUES(1,'thistrans',0,'2017-06-09 15:10:23.672632','2017-07-23 09:18:25.221432','food','Erdbeeren','1','2',NULL,4,4);
 INSERT INTO kohrsupply_transport VALUES(2,'thistrans',1,'2017-06-09 15:11:58.958836','2017-08-05 20:28:55.477580','food','12 Muffins mit Himbeeren','1','2',2,8,1);
 INSERT INTO kohrsupply_transport VALUES(3,'thistrans',1,'2017-06-15 16:02:53.550455','2018-07-22 16:10:22.998441','nonfood','Packung Schrauben M12','1','2',1,9,4);
-INSERT INTO kohrsupply_transport VALUES(4,'thistrans',1,'2017-06-25 16:49:37.733395','2017-06-25 16:49:37.733454','nonfood','3 Stapel Druckerpapier A4','2','3kg',1,1,5);
+INSERT INTO kohrsupply_transport VALUES(4,'thistrans',1,'2017-06-25 16:49:37.733395','2017-06-25 16:49:37.733454','nonfood','3 Stapel Druckerpapier A4','2','3',1,1,5);
 INSERT INTO kohrsupply_transport VALUES(6,'thistrans',0,'2018-07-24 18:24:19.987930','2018-07-24 19:32:12.435718','nonfood','Wohnungschlüssel','0,3','100g',13,14,14);
 INSERT INTO kohrsupply_transport VALUES(7,'thistrans',1,'2018-07-24 20:52:47.210012','2018-07-25 21:07:54.484246','nonfood','Herrenschuhe','2','1',13,17,14);
 INSERT INTO kohrsupply_transport VALUES(8,'thistrans',0,'2018-07-31 21:25:14.682729','2018-07-31 21:25:22.899691','deepfrozenfood','','','',12,12,12);
