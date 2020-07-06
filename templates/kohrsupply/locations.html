@@ -29,7 +29,9 @@
 </ol>
 </div>
 
-<div id="mapid"></div>
+{% if setting.KOHR_MAP %}
+ <div id="mapid"></div>
+{% endif %}
 
 
 {% endblock %}
