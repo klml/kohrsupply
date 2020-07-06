@@ -3,6 +3,7 @@
 
 import datetime
 from django.core.exceptions import ObjectDoesNotExist
+from django.conf import settings as setting ## must use "as", only settings did not work
 
 from .models import Transport, TransportLocation, TransportUserGetFet, TransportUserLocation
 from .forms import UserState
@@ -56,3 +57,8 @@ def usersLocations(request):
         return { 'usersLocations': usersLocations , }
     except ObjectDoesNotExist: ## catch anonymus and user without location
         return { 'usersLocations': '' , }
+
+
+def settings(request):
+    return { 'setting' : setting  }
+
