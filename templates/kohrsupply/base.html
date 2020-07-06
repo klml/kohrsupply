@@ -27,7 +27,12 @@
                     <button id="savetrs" type="submit" class="save btn btn-default">change</button>
                 </form>
                 {% load nbsp %}
+                {% if usersLocations.location.locationname|length  == 0 %}
+                <a href="/locations" >Please Checkin!</a>
+                {% else %}
                 in&nbsp;<a href="/location/{{ usersLocations.location.id }}" >{{ usersLocations.location.locationname | nbsp }}</a>
+                {% endif %}
+
             </span>
 
         {% else %}
