@@ -69,4 +69,3 @@ urlpatterns = [
 
     re_path(r'^admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-#~ ] + static('/static/', document_root='/home/kohr/kohrsupply/kohrsupply/static/')
