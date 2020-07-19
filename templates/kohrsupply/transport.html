@@ -33,13 +33,9 @@
             <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
         </h2>
         {{ transport.contentDescription }}
+        <span class="size" title="Größe">{{ transport.contentSize }}</span>
+        <span class="weight" title="Gewicht">{{ transport.contentWeight }} kg</span>
     </div>
-
-    <span class="size" title="Größe">{{ transport.contentSize }}</span>
-    <span class="weight" title="Gewicht">{{ transport.contentWeight }} kg</span>
-
-
-
     <br />
     #{{ transport.id }} | 
     Startpunkt: {{transport.origin }} bei {{ transport.sender }} um {{ transport.begin }} |
