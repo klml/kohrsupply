@@ -30,7 +30,7 @@
                     <em class="carrier" title="recipient is {{ transport.recipient }}, is currently {{ transport.recipientgetfet }} and has got {{ transport.recipientPoints.summa  }} points"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
                     <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
                 </h2>
-                {{ transport.contentDescription }}
+                <p>{{ transport.contentDescription }}</p>
                 <span class="size" title="Größe">{{ transport.contentSize }}</span>
                 <span class="weight" title="Gewicht">{{ transport.contentWeight }} kg</span>
             </div>

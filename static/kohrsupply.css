@@ -118,11 +118,14 @@ form#userstate input {
 
 /* transport  */
 .transport {
-    padding: 5px 10px;
-    background-color: #dde581;
+    padding: 0 10px;
     background-color: #c2e2d4;
-    border-bottom: 2px solid #fff;
-
+    border-top: 5px solid #c2e2d4;
+    border-bottom: 5px solid #c2e2d4;
+    background-repeat: repeat-y ;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAADUlEQVR42mP8/5+BAQAHAwIAILjcJwAAAABJRU5ErkJggg==) ;
+    background-position: 80px 0px;
+    margin-bottom: 2px;
     }
 .transport h1 span {
     font-size: 10px;
@@ -138,12 +141,9 @@ ul.transportlist a  {
     text-decoration: none;
     color: inherit;
 }
-.signetdistance {
+.contentDescription > .signetdistance {
     float: left;
-    width: 70px;
-    min-height: 115px; 
-    border-right: 2px solid #fff;
-    margin-right: 15px;
+    margin-left: 5px;
     padding-right: 5px;
 }
 
@@ -306,6 +306,9 @@ span.coords {
 .contentDescription  {
     padding-top: 10px;
 }
+.contentDescription > * {
+    margin-left: 85px;
+}
 
 .weight {
     padding-left: 15px;
@@ -338,6 +341,9 @@ span.coords {
     .holder span, .recipient span {
         min-width: 5em;
     }
+    .transport {
+        background-position: 60px 0px;
+    }
     .signet {
         background-size: 35px auto;
         background-position: 2px 5px;
@@ -354,6 +360,9 @@ span.coords {
     }
     .contentDescription {
         padding-top: 0;
+    }
+    .contentDescription > * {
+        margin-left: 65px;
     }
     #setuserstate select {
         width: 110px;
