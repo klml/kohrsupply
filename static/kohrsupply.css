@@ -341,6 +341,9 @@ span.coords {
     #content  {
         margin-top: 7em;
     }
+    #mapid {
+        border-right: 10px solid white ;
+    }
     .holder span, .recipient span {
         min-width: 5em;
     }
