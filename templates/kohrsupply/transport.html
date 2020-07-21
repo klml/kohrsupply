@@ -41,9 +41,8 @@
         Die letzte Bewegung: <span>{{ transport.lasttouched }}</span>
         </p>
     </div>
-    <br />
+</div>
 
-    <hr class="cb" />
     {% if user.is_authenticated and transport.currentHolder.id != user.id %}
     <form method="POST" id="taketransport" class="inline">
         {% csrf_token %}
@@ -69,7 +68,6 @@
     {% elif not transport.active %}
         <span>This transport is closed</span>
     {% endif %}
-    <hr class="cb" />
     <div class="log">
     <h3>log ▾</h3>
     <ul id="log">
@@ -77,9 +75,7 @@
         <li >{{transportPass.newcurrentHolder }} at {{transportPass.location}} <em class="coords" >{{transportPass.locationLat}}, {{transportPass.locationLon}}</em></li>
     {% endfor %}
     </ul>
-    </div>
 
-</div>
 
 {% if setting.KOHR_MAP %}
  <div id="mapid"></div>
