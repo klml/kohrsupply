@@ -342,7 +342,7 @@ span.coords {
         margin-top: 7em;
     }
     #mapid {
-        border-right: 10px solid white ;
+        border-right: 20px solid white ;
     }
     .holder span, .recipient span {
         min-width: 5em;
