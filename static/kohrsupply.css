@@ -300,8 +300,8 @@ ul.signetlist li.content_garbage,
 .distance2target{
     border-top: 1px solid #000;
 }
-span.coords {
-    display: none;
+.coords {
+    display: none !important;
 }
 
 .contentDescription  {
