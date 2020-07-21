@@ -68,6 +68,9 @@
     {% elif not transport.active %}
         <span>This transport is closed</span>
     {% endif %}
+    {% if setting.KOHR_MAP %}
+     <div id="mapid"></div>
+    {% endif %}
     <div class="log">
     <h3>log ▾</h3>
     <ul id="log">
@@ -75,10 +78,4 @@
         <li >{{transportPass.newcurrentHolder }} at {{transportPass.location}} <em class="coords" >{{transportPass.locationLat}}, {{transportPass.locationLon}}</em></li>
     {% endfor %}
     </ul>
-
-
-{% if setting.KOHR_MAP %}
- <div id="mapid"></div>
-{% endif %}
-
 {% endblock %}
