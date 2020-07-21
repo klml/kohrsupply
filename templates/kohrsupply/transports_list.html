@@ -18,7 +18,7 @@
                 <h2 class="holder carriergetfet_{{ transport.getfet }}" title="This transport is at">
                 {% load l10n %}
                     <span>{{ transport.currentLocation.locationname }}</span>
-                    <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }} ({{ transport.currentHolderPoints.summa }})
+                    <em class="carrier" title="carrier is {{ transport.currentHolder }}, is currently {{ transport.getfet }} and has got {{ transport.currentHolderPoints.summa  }} points" >{{ transport.currentHolder }}&nbsp;({{ transport.currentHolderPoints.summa }})
                     {% if transport.currentHolder.id == user.id %}
                         <span class="yours" title="You have this transport">★</span>
                     {% endif %}
@@ -27,7 +27,7 @@
                 </h2>
                 <h2 class="recipient carriergetfet_{{ transport.recipientgetfet }}" title="This transport should get to">
                     <span>{{ transport.recipientLocation.locationname }}</span>
-                    <em class="carrier" title="recipient is {{ transport.recipient }}, is currently {{ transport.recipientgetfet }} and has got {{ transport.recipientPoints.summa  }} points"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }} ({{ transport.recipientPoints.summa }})</em>
+                    <em class="carrier" title="recipient is {{ transport.recipient }}, is currently {{ transport.recipientgetfet }} and has got {{ transport.recipientPoints.summa  }} points"><small>{{ transport.recipientgetfet }}</small>{{ transport.recipient }}&nbsp;({{ transport.recipientPoints.summa }})</em>
                     <span class="coords ">{{ transport.recipientLocation.geoLat | unlocalize }}, {{ transport.recipientLocation.geoLon | unlocalize }}</span>
                 </h2>
                 <p>{{ transport.contentDescription }}</p>
