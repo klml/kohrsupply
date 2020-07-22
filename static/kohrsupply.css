@@ -342,7 +342,7 @@ ul.signetlist li.content_garbage,
         margin-top: 7em;
     }
     #mapid {
-        border-right: 20px solid white ;
+        margin-right: 20px ;
     }
     .holder span, .recipient span {
         min-width: 5em;
