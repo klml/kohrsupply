@@ -27,6 +27,8 @@ from json import dumps, loads, JSONEncoder, JSONDecoder
 from .models import Transport, TransportPass, TransportLocation, TransportUserGetFet, TransportUserLocation
 from .forms import CreateTransport , TransportUserLocationEdit
 
+from geographiclib.geodesic import Geodesic
+
 ###################
 
 filterargsLocationUser = { }
@@ -300,23 +302,19 @@ def buildTransport( transport ) :
         return
 
 
-    transport.distance2target       = haversine( transport.currentLocation , transport.recipientLocation )
+    transport.distance2target           = get_direction( transport.currentLocation , transport.recipientLocation )['distance']
 
 
-def haversine( current, recipient ):
-    # from http://stackoverflow.com/questions/4913349/haversine-formula-in-python-bearing-and-distance-between-two-gps-points
-    # TODO https://pypi.python.org/pypi/geopy Measuring Distance
+def get_direction( current, recipient ):
+    geod = Geodesic.WGS84
+    g  = geod.Inverse( round(current.geoLat,3), round(current.geoLon,3), round(recipient.geoLat,3), round(recipient.geoLon,3) )
+    azimut = round(g['azi1'])
+    if azimut < 0: azimut+= 360
 
-    # convert decimal degrees to radians 
-    lon1, lat1, lon2, lat2 = map(radians, [current.geoLon, current.geoLat, recipient.geoLon, recipient.geoLat])
+    distance = g['s12']/1000 ## km
+    distance = round( distance ,2)
 
-    # haversine formula 
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
-    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-    c = 2 * asin(sqrt(a)) 
-    r = 6371 # Radius of earth in kilometers. Use 3956 for miles
-    return round( c * r, 2 )
+    return {"azimut" : azimut, "distance": distance }
 
 
 #####
