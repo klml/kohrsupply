@@ -303,6 +303,7 @@ def buildTransport( transport ) :
 
 
     transport.distance2target           = get_direction( transport.currentLocation , transport.recipientLocation )['distance']
+    transport.cardinaldirection2target  = get_direction( transport.currentLocation , transport.recipientLocation )['azimut']
 
 
 def get_direction( current, recipient ):
