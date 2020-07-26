@@ -3,7 +3,9 @@
 {% block content %}
     <h1>Edit Transport</h1>
     <form id="transportedit" method="POST" class="post-form transport_{{transportid}}">{% csrf_token %}
-        {{ form.as_p }}
+        <div class="transport">
+            {{ form.as_p }}
+        </div>
         <button id="savetrs" type="submit" class="save btn btn-default" accesskey="s" >Save</button>
     </form>
 {% endblock %}
