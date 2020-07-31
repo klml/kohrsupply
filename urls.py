@@ -25,6 +25,7 @@ from django.conf.urls.static import static
 
 
 
+
 from django.urls import path, re_path
 from . import views
 
@@ -45,7 +46,6 @@ urlpatterns = [
     path('^', include('django.contrib.auth.urls')),
     re_path(r'^signup$', views.signup, name='signup'),
     path('login',views.login, name = 'login '),
-    re_path(r'^logout$', views.logout, name='logout' ),
     re_path(r'^password_reset$', views.password_reset, name='password_reset'),
     re_path(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.password_reset, name='password_reset_confirm'),
     re_path(r'^password_reset/done/$', views.password_reset, name='password_reset_done'),
