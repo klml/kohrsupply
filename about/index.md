@@ -16,7 +16,6 @@ Und natürlich Sendungen absenden und empfangen.
 
 * Wie [können user mitmachen](/about/mitmachen/)?
 * [kohrsupply ist freie software](https://github.com/klml/kohrsupply/), wir freuen uns über pullrequests, bugreports oder feature Wünsche.
-* oder auf [twitter.com/kohrsupply](https://twitter.com/kohrsupply)
 
 ## warum
 
